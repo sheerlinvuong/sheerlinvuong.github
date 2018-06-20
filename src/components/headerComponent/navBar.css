@@ -1,0 +1,35 @@
+.App {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: auto;
+  }
+
+  .App-logo {
+    display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 7vh;
+      max-width: 100%;
+      height: auto;
+
+  }
+.App-header {
+    text-align: center;
+    padding: 7vh;
+}
+
+li {
+    color: rgb(51, 61, 52);
+    display: inline;
+    padding-left: 6vw;
+    text-decoration: none!important;
+    font-size: 1.5vw;
+}
+
+.App-header li:hover {
+    color: rgb(90, 194, 107);
+}
+
+.active {
+    color:  rgb(90, 194, 107);
+}

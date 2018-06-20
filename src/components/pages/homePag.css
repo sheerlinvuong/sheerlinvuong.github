@@ -1,0 +1,34 @@
+.Bio {
+    display: grid;
+    grid-template-columns: 15em auto;
+    grid-template-rows: 10em auto;
+    height: 40em;
+
+    }
+
+    .Bio-body {
+      background-color: rgba(238, 174, 161, 0);
+      font-size: large;
+      grid-column: 2;
+      grid-row: 2
+    }
+    .Bio-header {
+      background-color: rgb(255, 255, 255);
+      color: rgb(71, 68, 68);
+
+      font-size: medium;
+      grid-column: 2;
+      grid-row: 1
+    }
+
+    .picbox {
+      width:10em;
+
+      grid-column: 1 / 2;
+    }
+
+    .pic {
+      max-width:100%;
+      height:auto;
+      border-radius: 50%;
+    }

@@ -1,0 +1,25 @@
+.CV {
+    display: grid;
+    grid-template-columns: 25vh auto;
+    grid-template-rows: 15vh auto;
+    height:55vh;
+
+    }
+
+    .CV-body {
+      background-color: indianred;
+      font-size: large;
+      grid-column: 2;
+      grid-row: 2
+
+
+
+    }
+    .CV-header {
+      background-color: rgb(126, 80, 138);
+      color: rgb(0, 255, 0);
+
+      font-size: 1.5em;
+      grid-column: 2;
+      grid-row: 1
+    }

@@ -1,0 +1,38 @@
+.Bio {
+  flex:1;
+
+  display: flex;
+    height: 55vh;
+
+  }
+
+  .Bio-body {
+    background-color: indianred;
+    font-size: large;
+    flex:1;
+
+
+
+  }
+  .Bio-header {
+    background-color: rgb(126, 80, 138);
+    color: rgb(0, 255, 0);
+
+    font-size: 1.5em;
+    flex:0.2;
+  }
+
+  .picbox {
+    width:25vh;
+    order: -1;
+  }
+
+  .pic {
+    max-width:100%;
+    height:auto;
+  }
+
+
+
+
+
