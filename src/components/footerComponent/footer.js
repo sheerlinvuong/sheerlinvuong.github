@@ -41,7 +41,7 @@ class Footer extends Component {
             <img src={twitter} />
           </a>
 
-          <a href="mailto:sheerlinvuong@gmail.com">
+          <a>
             <img src={email} />
           </a>
         </li>

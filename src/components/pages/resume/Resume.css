@@ -1,25 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:100,300,400');
+
 .CV {
     display: grid;
     grid-template-columns: 25vh auto;
     grid-template-rows: 15vh auto;
-    height:55vh;
+    height:150vh;
 
     }
 
-    .CV-body {
-      background-color: indianred;
-      font-size: large;
-      grid-column: 2;
-      grid-row: 2
-
-
-
-    }
     .CV-header {
-      background-color: rgb(126, 80, 138);
-      color: rgb(0, 255, 0);
-
+      background-color: rgba(64, 50, 68, 0.219);
+      color: rgb(0, 0, 0);
+      font-family: Roboto;
       font-size: 1.5em;
       grid-column: 2;
       grid-row: 1
     }
+    .CV-body {
+      line-height: normal;
+      grid-column: 2;
+      grid-row: 2;
+      font-style: normal;
+    }
+
+.t {
+  font-family: Roboto;
+  font-style: normal;
+}
+
+.ts {
+  font-family: 'Open Sans', sans-serif;
+}
