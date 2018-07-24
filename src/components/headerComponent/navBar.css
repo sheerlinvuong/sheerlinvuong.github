@@ -1,5 +1,5 @@
 .App {
-    background-color: rgb(255, 255, 255);
+    background-color: #FFDB8A;
     width: 100%;
     height: auto;
   }
@@ -14,6 +14,7 @@
 
   }
 .App-header {
+    background-color: #FFDB8A;
     text-align: center;
     padding: 7vh;
 }

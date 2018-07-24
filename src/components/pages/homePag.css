@@ -1,7 +1,7 @@
 .Bio {
     display: grid;
     grid-template-columns: 15em auto;
-    grid-template-rows: 10em auto;
+    grid-template-rows: 10em aut o;
     height: 40em;
 
     }
