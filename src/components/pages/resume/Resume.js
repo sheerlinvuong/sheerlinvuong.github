@@ -15,7 +15,7 @@ class Resume extends Component {
     {
       date: '2012 – 2014',
       positionTitle: 'Lambeth Academy Sixth Form',
-      details: ['A-levels: Mathematics (B), Chemistry (C), Physics (D)'],
+      details: ['A-levels: Mathematics, Chemistry, Physics'],
     },
   ];
   workContent = [
