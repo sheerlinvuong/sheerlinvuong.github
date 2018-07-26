@@ -14,7 +14,7 @@
     "svg-inline-loader": "^0.8.0",
     "svg-inline-react": "^3.1.0"
   },
-  "homepage": "https://sheerlinvuong.github.io",
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
