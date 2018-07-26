@@ -49,7 +49,7 @@ class Contact extends Component {
       return;
     }
 
-    const url = 'http://localhost:8080/contact';
+    const url = 'https://relaxed-turing-dd698f.netlify.com/contact';
     fetch(url, {
       method: 'POST',
       mode: 'cors',
