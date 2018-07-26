@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './contact.css';
 import ReCaptcha from 'react-google-recaptcha';
+require('dotenv').config();
 
 class Contact extends Component {
   state = {
