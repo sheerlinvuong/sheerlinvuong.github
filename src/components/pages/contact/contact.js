@@ -49,7 +49,7 @@ class Contact extends Component {
       return;
     }
 
-    const url = 'https://infinite-taiga-21063.herokuapp.com/';
+    const url = 'https://relaxed-turing-dd698f.netlify.com/contact';
     fetch(url, {
       method: 'POST',
       mode: 'cors',
