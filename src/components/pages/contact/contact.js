@@ -7,6 +7,7 @@ class Contact extends Component {
     form: {
       name: '',
       email: '',
+      subject: '',
       message: '',
     },
 
@@ -32,17 +33,21 @@ class Contact extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const { name, email, message } = this.state.form;
+    const { name, email, subject, message } = this.state.form;
     const { gToken } = this.state;
 
-    const isInvalidForm = name === '' || email === '' || message === '';
+    const isInvalidForm =
+      name === '' || email === '' || subject === '' || message === '';
 
     const isIncompleteRecaptcha = gToken === '';
 
     if (isInvalidForm) {
       alert('hey your form is incomplete, please answer all boxes');
       return;
-    }
+    } // if no @ sign on email
+    //message max 200 char
+    //optional subject
+    //(required) in box
 
     if (isIncompleteRecaptcha) {
       alert('please tick recaptcha');
@@ -50,6 +55,7 @@ class Contact extends Component {
     }
 
     const url = 'https://infinite-taiga-21063.herokuapp.com/';
+    console.log(this.state);
     fetch(url, {
       method: 'POST',
       mode: 'cors',
@@ -61,46 +67,60 @@ class Contact extends Component {
       .then(res => res.json())
       .catch(error => console.log(error))
       .then(response => console.log(response));
+    //.then(add reset recatpcta )
   };
 
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
+          <div>
+            <label>Name:</label>
             <input
               type="text"
               name="name"
               value={this.state.form.name}
               onChange={this.handleChange}
             />
-          </label>
-          <label>
-            email:
+          </div>
+          <div>
+            <label>Email Address:</label>
             <input
               type="text"
               name="email"
               value={this.state.form.email}
               onChange={this.handleChange}
             />
-          </label>
-          <label>
-            message:
+          </div>
+          <div>
+            <label>Subject:</label>
             <input
+              type="text"
+              name="subject"
+              value={this.state.form.subject}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div>
+            <label>Message:</label>
+            <textarea
               type="text"
               name="message"
               value={this.state.form.message}
               onChange={this.handleChange}
             />
-          </label>
-          <button type="submit">Submit</button>
+          </div>
+
+          <ReCaptcha
+            className="recaptcha"
+            ref="recaptcha"
+            sitekey="6LdeiGYUAAAAAIAihGaRFl-FZBLqRXf8DhC7lu9h"
+            onChange={this.handleRecaptcha}
+          />
+          <div>
+            <button type="submit">Submit</button>
+          </div>
         </form>
-        <ReCaptcha
-          ref="recaptcha"
-          sitekey="6LdeiGYUAAAAAIAihGaRFl-FZBLqRXf8DhC7lu9h"
-          onChange={this.handleRecaptcha}
-        />
       </div>
     );
   }
