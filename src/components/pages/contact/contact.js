@@ -36,8 +36,7 @@ class Contact extends Component {
     const { name, email, subject, message } = this.state.form;
     const { gToken } = this.state;
 
-    const isInvalidForm =
-      name === '' || email === '' || subject === '' || message === '';
+    const isInvalidForm = name === '' || email === '' || message === '';
 
     const isIncompleteRecaptcha = gToken === '';
 
@@ -77,6 +76,7 @@ class Contact extends Component {
           <div>
             <label>Name:</label>
             <input
+              placeholder="(Required)"
               type="text"
               name="name"
               value={this.state.form.name}
@@ -86,6 +86,7 @@ class Contact extends Component {
           <div>
             <label>Email Address:</label>
             <input
+              placeholder="(Required)"
               type="text"
               name="email"
               value={this.state.form.email}
@@ -95,6 +96,7 @@ class Contact extends Component {
           <div>
             <label>Subject:</label>
             <input
+              placeholder="(Optional)"
               type="text"
               name="subject"
               value={this.state.form.subject}
@@ -104,6 +106,7 @@ class Contact extends Component {
           <div>
             <label>Message:</label>
             <textarea
+              placeholder="(Required)"
               type="text"
               name="message"
               value={this.state.form.message}
