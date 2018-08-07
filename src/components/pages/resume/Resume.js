@@ -26,45 +26,62 @@ class Resume extends Component {
       date: 'June 2018 - Present: ',
       positionTitle: ' “WhoDat” - Celebrity facial recognition app',
       details: [
-        <ul>
-          <li>{BULLET}Designed and implemented first mobile app.</li>
-          <li> Integrated Amazon AWS “Rekognition” API.</li>
-          <li>
-            {BULLET}● Fast development strategy, implemented working concept in
-            a week.
-          </li>
-          <li>
-            {BULLET}● Created celebrity face data set by implementing imdb web
-            scraper.
-          </li>
-          <li>
-            {BULLET}● Obtained working command of javascript and frameworks
-            (React Native, Express).
-          </li>
-        </ul>,
+        '• Designed and implemented first mobile app.',
+        '• Integrated Amazon AWS “Rekognition” API.',
+        '• Fast development strategy, implemented working concept in a week.',
+        '• Created celebrity face data set by implementing imdb web scraper.',
+        '• Obtained working command of javascript and frameworks (React Native, Express).',
       ],
     },
 
     {
-      date: '10/16',
-      positionTitle: 'Catering Assistant at Liberty Stadium',
+      date: 'November 2016 - March 2017: ',
+      positionTitle:
+        '“Modelling 3D Cities Using Online Data” (Dissertation) at Swansea University',
       details: [
-        '● Efficiently serving customers in a fast-paced environment',
-        '● Providing great customer service and quickly dealing with problems',
-        'Handling cash and operating tills',
-        'Maintaining the shop floor through cleaning and replenishing stock',
+        ' Awarded W Renwick Prize for the Best Software-based Project by Swansea College of Engineering',
+        '• Directed the project plan and set measurable targets to enable successful project completion.',
+        '• Obtained working command of Python.',
+        '• Demonstrated ability to design and implement software solutions; from researching APIs, data parsing to graphical data representation.',
       ],
     },
 
     {
-      date: '08/10 - 05/12',
+      date: '2016:',
+      positionTitle: '“Micromouse” (Group Project) at Swansea University',
+      details: [
+        '• Demonstrated good group communication and coordination to create an obstacle avoiding robot.',
+        '• Exposure to low level programming of microcontrollers.',
+        '• Obtained working knowledge of C.',
+      ],
+    },
+
+    {
+      date: 'October 2015 – April 2017: ',
+      positionTitle: 'Student Ambassador at Swansea University',
+      details: [
+        '• Representing the university on open/visit days and ensuring a lively and positive experience.',
+        '• Offer insightful guidance for prospective students and parents.',
+      ],
+    },
+
+    {
+      date: 'August 2010 - May 2012:: ',
       positionTitle: 'Volunteer at Cancer Research Charity Shop',
       details: [
-        'Fundraiser: Planning new and interesting ideas to raise money within a team as well as organizing fundraising events on the high street',
-        'Sales Assistant: Providing well-mannered customer service,',
-        'Handling the cash machine and counting the profit',
-        'managing, stocking and cleaning the shop floor',
-        'Administrative skills when putting customer information into the subscription database',
+        '• Fundraiser: Strategized new and interesting ideas to raise money within a team as well as organizing fundraising events on the high street.',
+        '• Sales Assistant: Communicating and assisting with well-mannered customer service.',
+      ],
+    },
+  ];
+  skillsContent = [
+    {
+      date: '',
+      positionTitle: '',
+      details: [
+        '• Javascript​ (Node.js, Express, React, React Native )',
+        '• Python​, (Matplotlib, Numpy, VPython)',
+        '• HTML, CSS',
       ],
     },
   ];
@@ -83,14 +100,16 @@ class Resume extends Component {
   render() {
     return (
       <div className="CV">
-        <a href="CVSheerlin.pdf" type="application/pdf">
-          {' '}
-          View my resume in PDF here!{' '}
-        </a>
         <header>
+          <a href="CVSheerlin.pdf" type="application/pdf">
+            {' '}
+            View my resume in PDF here!{' '}
+          </a>
           <h1>Resume</h1>
         </header>
         <body className="CV-body">
+          <p>Skills </p>
+          {this.renderContents(this.skillsContent)}
           <p>Experience</p>
           {this.renderContents(this.workContent)}
           <p> Education </p>
