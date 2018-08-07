@@ -4,6 +4,7 @@ import './Resume.css';
 //import { Document } from 'react-pdf';
 //import pic from './pic.png';
 
+const BULLET = '\u2022 ';
 class Resume extends Component {
   educationContent = [
     {
@@ -22,12 +23,25 @@ class Resume extends Component {
   ];
   workContent = [
     {
-      date: '10/15 - 04/17 ',
-      positionTitle: 'Student Ambassador at Swansea University',
+      date: 'June 2018 - Present: ',
+      positionTitle: ' “WhoDat” - Celebrity facial recognition app',
       details: [
-        'Representing the university on open/visit days and ensuring a lively and positive experience',
-        'Tour guide for prospective students and parents',
-        'Responsible for answering any questions and providing information',
+        <ul>
+          <li>{BULLET}Designed and implemented first mobile app.</li>
+          <li> Integrated Amazon AWS “Rekognition” API.</li>
+          <li>
+            {BULLET}● Fast development strategy, implemented working concept in
+            a week.
+          </li>
+          <li>
+            {BULLET}● Created celebrity face data set by implementing imdb web
+            scraper.
+          </li>
+          <li>
+            {BULLET}● Obtained working command of javascript and frameworks
+            (React Native, Express).
+          </li>
+        </ul>,
       ],
     },
 
@@ -35,8 +49,8 @@ class Resume extends Component {
       date: '10/16',
       positionTitle: 'Catering Assistant at Liberty Stadium',
       details: [
-        'Efficiently serving customers in a fast-paced environment',
-        'Providing great customer service and quickly dealing with problems',
+        '● Efficiently serving customers in a fast-paced environment',
+        '● Providing great customer service and quickly dealing with problems',
         'Handling cash and operating tills',
         'Maintaining the shop floor through cleaning and replenishing stock',
       ],
@@ -73,14 +87,14 @@ class Resume extends Component {
           {' '}
           View my resume in PDF here!{' '}
         </a>
-        <header className="CV-header">
+        <header>
           <h1>Resume</h1>
         </header>
         <body className="CV-body">
+          <p>Experience</p>
+          {this.renderContents(this.workContent)}
           <p> Education </p>
           {this.renderContents(this.educationContent)}
-          <p> Work Experience</p>
-          {this.renderContents(this.workContent)}
         </body>
       </div>
     );
