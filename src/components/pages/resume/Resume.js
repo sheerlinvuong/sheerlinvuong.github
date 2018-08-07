@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Resume.css';
+//import cv from './sheerlincv.pdf';
+//import { Document } from 'react-pdf';
 //import pic from './pic.png';
 
 class Resume extends Component {
@@ -67,6 +69,10 @@ class Resume extends Component {
   render() {
     return (
       <div className="CV">
+        <a href="CVSheerlin.pdf" type="application/pdf">
+          {' '}
+          View my resume in PDF here!{' '}
+        </a>
         <header className="CV-header">
           <h1>Resume</h1>
         </header>
@@ -82,3 +88,36 @@ class Resume extends Component {
 }
 
 export default Resume;
+
+// import React, { Component } from 'react';
+// import { Document, Page } from 'react-pdf/dist/entry.webpack';
+
+// class Resume extends Component {
+//   state = {
+//     numPages: null,
+//     pageNumber: 1,
+//   };
+
+//   onDocumentLoadSuccess = ({ numPages }) => {
+//     this.setState({ numPages });
+//   };
+
+//   render() {
+//     const { pageNumber, numPages } = this.state;
+
+//     return (
+//       <div>
+//         <Document
+//           file="CVSheerlin.pdf"
+//           onLoadSuccess={this.onDocumentLoadSuccess}
+//         >
+//           <Page pageNumber={pageNumber} />
+//         </Document>
+//         <p>
+//           Page {pageNumber} of {numPages}
+//         </p>
+//       </div>
+//     );
+//   }
+// }
+// export default Resume;
