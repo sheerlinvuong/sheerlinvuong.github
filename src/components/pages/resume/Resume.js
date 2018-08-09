@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import './Resume.css';
-//import cv from './sheerlincv.pdf';
-//import { Document } from 'react-pdf';
-//import pic from './pic.png';
 
-const BULLET = '\u2022 ';
 class Resume extends Component {
   educationContent = [
     {
@@ -66,7 +62,7 @@ class Resume extends Component {
     },
 
     {
-      date: 'August 2010 - May 2012:: ',
+      date: 'August 2010 - May 2012: ',
       positionTitle: 'Volunteer at Cancer Research Charity Shop',
       details: [
         '• Fundraiser: Strategized new and interesting ideas to raise money within a team as well as organizing fundraising events on the high street.',
@@ -76,11 +72,11 @@ class Resume extends Component {
   ];
   skillsContent = [
     {
-      date: '',
+      date: null,
       positionTitle: '',
       details: [
         '• Javascript​ (Node.js, Express, React, React Native )',
-        '• Python​, (Matplotlib, Numpy, VPython)',
+        '• Python (Matplotlib, Numpy, VPython)',
         '• HTML, CSS',
       ],
     },
@@ -90,16 +86,23 @@ class Resume extends Component {
   renderContents = contents =>
     contents.map(c => (
       <div>
-        <h3>
-          {c.date} {c.positionTitle}
-        </h3>
-        <ul>{this.renderDetails(c.details)}</ul>
+        <tr>
+          <th>
+            <h5 className="positionTitle">{c.positionTitle}</h5>{' '}
+          </th>
+          <th>
+            <p className="date"> {c.date} </p>
+          </th>
+        </tr>
+        <tr>
+          <ul>{this.renderDetails(c.details)}</ul>
+        </tr>
       </div>
     ));
 
   render() {
     return (
-      <div className="CV">
+      <div>
         <header>
           <a href="CVSheerlin.pdf" type="application/pdf">
             {' '}
@@ -108,11 +111,13 @@ class Resume extends Component {
           <h1>Resume</h1>
         </header>
         <body className="CV-body">
-          <p>Skills </p>
+          <h5 className="subHeader">Skills </h5>
           {this.renderContents(this.skillsContent)}
-          <p>Experience</p>
+          <p> </p>
+          <h5 className="subHeader">Experience </h5>
+          <p> </p>
           {this.renderContents(this.workContent)}
-          <p> Education </p>
+          <h5 className="subHeader"> Education </h5>
           {this.renderContents(this.educationContent)}
         </body>
       </div>
@@ -121,36 +126,3 @@ class Resume extends Component {
 }
 
 export default Resume;
-
-// import React, { Component } from 'react';
-// import { Document, Page } from 'react-pdf/dist/entry.webpack';
-
-// class Resume extends Component {
-//   state = {
-//     numPages: null,
-//     pageNumber: 1,
-//   };
-
-//   onDocumentLoadSuccess = ({ numPages }) => {
-//     this.setState({ numPages });
-//   };
-
-//   render() {
-//     const { pageNumber, numPages } = this.state;
-
-//     return (
-//       <div>
-//         <Document
-//           file="CVSheerlin.pdf"
-//           onLoadSuccess={this.onDocumentLoadSuccess}
-//         >
-//           <Page pageNumber={pageNumber} />
-//         </Document>
-//         <p>
-//           Page {pageNumber} of {numPages}
-//         </p>
-//       </div>
-//     );
-//   }
-// }
-// export default Resume;

@@ -1,27 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:100,300,400');
 
-.CV {
-    display: grid;
-    grid-template-columns: 25vh auto;
-    grid-template-rows: 15vh auto;
-    height:150vh;
-
-    }
-
-    .CV-header {
-      background-color: #FFDB8A;
-      color: rgb(0, 0, 0);
-      font-family: Roboto;
-      font-size: 1.5em;
-      grid-column: 2;
-      grid-row: 1
-    }
     .CV-body {
       line-height: normal;
       grid-column: 2;
       grid-row: 2;
       font-style: normal;
     }
+
+.subHeader{
+  font-family: Roboto;
+  color: rgb(38, 50, 90);
+  font-size: 1em;
+    }
+
+.date{
+text-align:right;
+}
+
+.positionTitle{
+  font-size: 1em;
+
+}
 
 .t {
   font-family: Roboto;
@@ -35,3 +34,4 @@ li{
  padding-left: 0px;
  margin-left: 0px;
 }
+
