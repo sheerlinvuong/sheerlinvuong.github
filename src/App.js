@@ -17,14 +17,14 @@ class App extends Component {
         <div className="wrapper">
           {/* <HomePage /> */}
           <NavBar className="nav" />
-
-          <Switch className="content">
-            <Route exact path="/" component={HomePage} />
-            <Route path="/resume" component={Resume} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/contact" component={Contact} />
-          </Switch>
-
+          <div className="content">
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route path="/resume" component={Resume} />
+              <Route path="/projects" component={Projects} />
+              <Route path="/contact" component={Contact} />
+            </Switch>
+          </div>
           <Footer className="footer" />
         </div>
       </Router>

@@ -1,8 +1,12 @@
 
 .wrapper {
-    margin-left: 10vw;
-    margin-right: 10vw;
     display: flex;
     flex-direction: column;
     flex:1;
+
+}
+
+.content{
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
