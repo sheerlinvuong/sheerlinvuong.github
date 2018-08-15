@@ -86,17 +86,9 @@ class Resume extends Component {
   renderContents = contents =>
     contents.map(c => (
       <div>
-        <tr>
-          <th>
-            <h5 className="positionTitle">{c.positionTitle}</h5>{' '}
-          </th>
-          <th>
-            <p className="date"> {c.date} </p>
-          </th>
-        </tr>
-        <tr>
-          <ul>{this.renderDetails(c.details)}</ul>
-        </tr>
+        <p className="date"> {c.date} </p>
+        <h5 className="positionTitle">{c.positionTitle}</h5>{' '}
+        <ul>{this.renderDetails(c.details)}</ul>
       </div>
     ));
 
@@ -111,13 +103,12 @@ class Resume extends Component {
           <h1>Resume</h1>
         </header>
         <body className="CV-body">
-          <h5 className="subHeader">Skills </h5>
+          <h5>Skills </h5>
           {this.renderContents(this.skillsContent)}
-          <p> </p>
-          <h5 className="subHeader">Experience </h5>
-          <p> </p>
+          <h5>Experience </h5>
+
           {this.renderContents(this.workContent)}
-          <h5 className="subHeader"> Education </h5>
+          <h5> Education </h5>
           {this.renderContents(this.educationContent)}
         </body>
       </div>

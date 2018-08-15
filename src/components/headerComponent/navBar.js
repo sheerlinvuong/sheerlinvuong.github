@@ -8,20 +8,60 @@ class NavBar extends Component {
     return (
       <div className="App">
         <img className="App-logo" src={logo} alt="logo" />
-        <header className="App-header">
+        <ul>
           <li>
-            <NavLink to="">ABOUT</NavLink>
+            <NavLink
+              exact
+              to=""
+              style={{
+                textDecoration: 'none',
+                color: 'grey',
+              }}
+              activeStyle={{ color: 'lightsalmon' }}
+            >
+              ABOUT
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/projects">PROJECTS</NavLink>
+            <NavLink
+              exact
+              to="/projects"
+              style={{
+                textDecoration: 'none',
+                color: 'grey',
+              }}
+              activeStyle={{ color: 'lightsalmon' }}
+            >
+              PROJECTS
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/resume">RESUME</NavLink>
+            <NavLink
+              exact
+              to="/resume"
+              style={{
+                textDecoration: 'none',
+                color: 'grey',
+              }}
+              activeStyle={{ color: 'lightsalmon' }}
+            >
+              RESUME
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/contact">CONTACT</NavLink>
+            <NavLink
+              exact
+              to="/contact"
+              style={{
+                textDecoration: 'none',
+                color: 'grey',
+              }}
+              activeStyle={{ color: 'lightsalmon' }}
+            >
+              CONTACT
+            </NavLink>
           </li>
-        </header>
+        </ul>
       </div>
     );
   }

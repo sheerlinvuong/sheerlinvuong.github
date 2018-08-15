@@ -2,16 +2,9 @@
 
     .CV-body {
       line-height: normal;
-      grid-column: 2;
-      grid-row: 2;
       font-style: normal;
     }
 
-.subHeader{
-  font-family: Roboto;
-  color: rgb(38, 50, 90);
-  font-size: 1em;
-    }
 
 .date{
 text-align:right;
@@ -19,6 +12,9 @@ text-align:right;
 
 .positionTitle{
   font-size: 1em;
+  font-family: Roboto;
+  color: rgb(38, 50, 90);
+
 
 }
 

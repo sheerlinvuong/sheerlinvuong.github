@@ -1,5 +1,12 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding: 7vh;
+}
+
 .App {
-    background-color: #FFDB8A;
     width: 100%;
     height: auto;
   }
@@ -11,26 +18,20 @@
       padding: 7vh;
       max-width: 100%;
       height: auto;
-
   }
-.App-header {
-    background-color: #FFDB8A;
-    text-align: center;
-    padding: 7vh;
-}
 
 li {
-    color: rgb(51, 61, 52);
+    text-decoration: none;
+    color: rgba(93, 89, 95, 0);
     display: inline;
     padding-left: 6vw;
-    text-decoration: none!important;
     font-size: 1.5vw;
 }
 
-.App-header li:hover {
-    color: rgb(90, 194, 107);
+h3{
+    text-decoration: none;
 }
 
 .active {
-    color:  rgb(90, 194, 107);
+    color:  rgb(124, 187, 238);
 }
