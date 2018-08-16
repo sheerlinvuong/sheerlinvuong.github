@@ -10,14 +10,12 @@ class HomePage extends Component {
           <h1>Hello, I'm Sheerlin </h1>
         </header>
         <body className="Bio-body">
-          <p>
-            Hello, I'm k,gkj,Sheerlin sdjnvd vdjnkjfnvd fkdlkfgkj fdgijfdgj{' '}
-          </p>
-          <p>Hello, this website is under construction</p>
-          <p>Hello, I'm=nvd vdjnkjfnvd fkdlkfgkj fdgijfdgj </p>
+          <p>Hello, I'm Sheerlin </p>
+          <p>This website is currrently under construction</p>
+          <p />
         </body>
         <picture className="picbox">
-          <img src={pic} alt="pic" className="pic" />
+          <img src={pic} alt="pic" />
         </picture>
       </div>
     );
