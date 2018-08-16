@@ -7,6 +7,11 @@
 }
 
 .content{
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+.footer{
+    width: 100vw;
+
 }

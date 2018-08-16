@@ -21,15 +21,9 @@ ul {
   }
 
 li {
-    text-decoration: none;
-    color: rgba(93, 89, 95, 0);
     display: inline;
-    padding-left: 6vw;
-    font-size: 1.5vw;
-}
-
-h3{
-    text-decoration: none;
+    padding: 2em;
+    font-size: 5vh;
 }
 
 .active {

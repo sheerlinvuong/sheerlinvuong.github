@@ -16,8 +16,9 @@ class Footer extends Component {
   };
   render() {
     return (
-      <footer>
-        {/* <div
+      <footer className="footer">
+        <ul>
+          {/* <div
           style={{ backgroundColor: this.state.githuhover ? '#fff' : '#000' }}
         >
           <img
@@ -30,21 +31,22 @@ class Footer extends Component {
             src={instagram}
           />
         </div> */}
-        <li>
-          <a href="https://github.com/sheerlinvuong">
-            <img src={github} />
-          </a>
+          <li>
+            <a href="https://github.com/sheerlinvuong">
+              <img src={github} />
+            </a>
 
-          <img src={linkedin} />
+            <img src={linkedin} />
 
-          <a href="https://twitter.com/sheerlinonline">
-            <img src={twitter} />
-          </a>
+            <a href="https://twitter.com/sheerlinonline">
+              <img src={twitter} />
+            </a>
 
-          <a>
-            <img src={email} />
-          </a>
-        </li>
+            <a>
+              <img src={email} />
+            </a>
+          </li>
+        </ul>
       </footer>
     );
   }

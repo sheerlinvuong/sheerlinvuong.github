@@ -71,7 +71,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className="form-wrapper">
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Name:</label>
@@ -128,5 +128,6 @@ class Contact extends Component {
     );
   }
 }
+console.log('');
 
 export default Contact;
