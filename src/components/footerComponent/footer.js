@@ -7,18 +7,35 @@ import twitter from './logo-twitter.svg';
 import email from './logo-email.svg';
 
 class Footer extends Component {
-  // renderIcon(svgImage) {
-  //   return()
-  // }
-
-  state = {
-    githuhover: false,
-  };
   render() {
     return (
       <footer className="footer">
-        <ul>
-          {/* <div
+        <li>
+          <a href="https://www.instagram.com/sheerlin/">
+            <img src={instagram} />
+          </a>
+
+          <a href="https://github.com/sheerlinvuong">
+            <img src={github} />
+          </a>
+
+          <img src={linkedin} />
+
+          <a href="https://twitter.com/sheerlinonline">
+            <img src={twitter} />
+          </a>
+
+          <a>
+            <img src={email} />
+          </a>
+        </li>
+      </footer>
+    );
+  }
+}
+
+export default Footer;
+/* <div
           style={{ backgroundColor: this.state.githuhover ? '#fff' : '#000' }}
         >
           <img
@@ -30,26 +47,4 @@ class Footer extends Component {
             }}
             src={instagram}
           />
-        </div> */}
-          <li>
-            <a href="https://github.com/sheerlinvuong">
-              <img src={github} />
-            </a>
-
-            <img src={linkedin} />
-
-            <a href="https://twitter.com/sheerlinonline">
-              <img src={twitter} />
-            </a>
-
-            <a>
-              <img src={email} />
-            </a>
-          </li>
-        </ul>
-      </footer>
-    );
-  }
-}
-
-export default Footer;
+        </div> */
