@@ -54,6 +54,7 @@ class Contact extends Component {
     }
 
     const url = 'https://infinite-taiga-21063.herokuapp.com/';
+    //const url = 'http://localhost:8080';
     console.log(this.state);
     fetch(url, {
       method: 'POST',
@@ -72,6 +73,9 @@ class Contact extends Component {
   render() {
     return (
       <div className="form-wrapper">
+        <div className="form-heading">
+          <p>Ask a question or say hello! Contact me here ☺ ☻</p>
+        </div>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Name:</label>
