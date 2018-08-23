@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import './footer.css';
 import instagram from './logo-instagram.svg';
 import github from './logo-github.svg';
 import linkedin from './logo-linkedin.svg';
 import twitter from './logo-twitter.svg';
 import email from './logo-email.svg';
+import medium from './logo-medium.svg';
 
 class Footer extends Component {
   render() {
@@ -19,14 +21,17 @@ class Footer extends Component {
             <img src={github} />
           </a>
 
-          <img src={linkedin} />
-
+          <a href="https://medium.com/@sheerlinvuong">
+            <img src={medium} height="35px" />
+          </a>
           <a href="https://twitter.com/sheerlinonline">
             <img src={twitter} />
           </a>
 
           <a>
-            <img src={email} />
+            <NavLink exact to="/contact">
+              <img src={email} />
+            </NavLink>{' '}
           </a>
         </li>
       </footer>
