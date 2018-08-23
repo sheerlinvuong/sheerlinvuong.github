@@ -1,23 +1,18 @@
 .Proj {
     display: grid;
-
-    background-color: rgba(161, 238, 208, 0);
     padding:  5px;
     padding-bottom: 20px;
 
     }
 
     .Proj-header {
-      background-color: rgba(69, 109, 196, 0.082);
       color: rgb(82, 82, 82);
-
       font-size: medium;
-
     }
 
     .Proj-body {
-      background-color: rgba(238, 174, 161, 0.13);
       font-size: large;
       color: rgb(82, 82, 82);
+      word-wrap: break-word;
     }
 
