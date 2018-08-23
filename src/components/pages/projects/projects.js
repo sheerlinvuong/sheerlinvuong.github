@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './projects.css';
 import WebformGif from './webform.gif';
+import WhoDatGif from './WhoDat.gif';
 
 class Projects extends Component {
   render() {
@@ -14,8 +15,9 @@ class Projects extends Component {
           <body className="Proj-body">
             <p>
               A simple messaging bot with Node.js.
-              <br /> Instead of receiving contact form messages in my e-mail, I
-              used a telegram bot to relay them to me.
+              <br /> <br />
+              Instead of receiving contact form messages in my e-mail, I used a
+              telegram bot to relay them to me.
               <br />
               To achieve this I used Express.js and node-fetch to listen to HTTP
               POST requests from the web form. The bot then posts the messages
@@ -41,11 +43,13 @@ class Projects extends Component {
             <h1>WhoDat App</h1>
           </header>
           <body className="Proj-body">
+            <img src={WhoDatGif} width="250" />
             <p>
               Easily recognise celebrities with WhoDat mobile app. <br />
+              <br />
               Point the camera at a celebrity and their name and the percent
               accuracy appears. <br />I contributed to the design of the app as
-              well as implementing the gallery screen. <br />
+              well as implementing the navigation and gallery screen. <br />
             </p>
           </body>
         </div>

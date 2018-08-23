@@ -16,3 +16,7 @@
       word-wrap: break-word;
     }
 
+    .Proj-body img {
+      float: left;
+      padding-right: 25px;
+  }
