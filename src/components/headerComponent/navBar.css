@@ -6,8 +6,8 @@
 
 .App {
     width: 100%;
-    height: auto;
     text-align: center;
+    height: 45vh;
   }
 
 .App-logo {

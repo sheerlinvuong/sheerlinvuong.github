@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 15em auto;
     grid-template-rows: 10em auto;
-    height: 40em;
     }
 
 .Bio-header {
