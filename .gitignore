@@ -22,3 +22,4 @@ yarn-debug.log*
 yarn-error.log*
 
 slnx.sqlite.vs
+test.js
