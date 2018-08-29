@@ -3,6 +3,22 @@ import './homePag.css';
 import pic from './pic.png';
 
 class HomePage extends Component {
+  state ={
+    isMobile: false
+  }
+
+  handleWindowResize = () => {
+    this.setState({ isMobile: window.innerWidth <= 600 });
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleWindowResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowResize);
+  }
+
   render() {
     return (
       <div className="Bio">
@@ -14,9 +30,9 @@ class HomePage extends Component {
           <p>This website is currrently under construction</p>
           <p />
         </body>
-        <picture className="picbox">
+        {!this.state.isMobile && <picture className="picbox">
           <img src={pic} alt="pic" />
-        </picture>
+        </picture> }
       </div>
     );
   }

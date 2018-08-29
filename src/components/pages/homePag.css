@@ -31,3 +31,18 @@
       margin-right: 50px;
       margin-top: 40px;
     }
+
+@media (max-width:600px){
+  .Bio{
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+  .Bio-header {
+    grid-row: 1;
+      }
+  
+    .Bio-body {
+      grid-row: 2
+      }
+
+}    

@@ -7,8 +7,10 @@ class NavBar extends Component {
   render() {
     return (
       <div className="App">
-        <img className="App-logo" src={logo} alt="logo" />
-        <ul>
+      <picture className="App-logo">
+      <img src={logo} alt="logo" />
+      </picture>  
+        <ul className="nav">
           <li>
             <NavLink
               exact
