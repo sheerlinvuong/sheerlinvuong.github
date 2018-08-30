@@ -7,9 +7,9 @@ class NavBar extends Component {
   render() {
     return (
       <div className="App">
-      <picture className="App-logo">
-      <img src={logo} alt="logo" />
-      </picture>  
+        <picture className="App-logo">
+          <img src={logo} alt="logo" />
+        </picture>
         <ul className="nav">
           <li>
             <NavLink

@@ -31,3 +31,8 @@ le{
  padding-left: 0px;
  margin-left: 0px;
 }
+
+.resume {
+  justify-content: center;
+  text-align: center;
+}

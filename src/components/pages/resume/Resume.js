@@ -134,17 +134,13 @@ class Resume extends Component {
     const { pageNumber, numPages } = this.state;
 
     return (
-      <div>
+      <div className="resume">
         <a href="CVSheerlin.pdf" type="application/pdf">
           {' '}
           Download my resume in PDF here!{' '}
         </a>
-        <Document
-          file="CVSheerlin.pdf"
-          onLoadSuccess={this.onDocumentLoad}
-          scale="2"
-        >
-          <Page pageNumber={pageNumber} />
+        <Document file="CVSheerlin.pdf" onLoadSuccess={this.onDocumentLoad}>
+          <Page pageNumber={pageNumber} scale="1.3" />
         </Document>
       </div>
     );
