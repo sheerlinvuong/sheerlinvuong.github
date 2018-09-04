@@ -1,28 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:300');
 * {
   margin: 0;
   padding: 0;
-}
 
-.nav li {
-    display: inline;
-    padding: 2em;
-    font-size: 1em;
-    margin-left: 0px;
 }
-
 .App {
     width: 100%;
     text-align: center;
-    height: 30vh;
+    height: 5vh;
+    padding: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
-.App-logo img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 7vh;
-    height: auto;
-  }
+
+  .App-logo {
+      display: block;
+      margin-left: 50px;
+      margin-right: 50px;
+      font-size: 17px;
+    }
+
+.nav li {
+    display: inline;
+    padding: 20px;
+    font-size: 15px;
+    margin-left: 0px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
 
 @media (max-width: 600px){
     .App-logo img{

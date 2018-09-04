@@ -5,13 +5,14 @@
     align-items: center;
     justify-content: center;
     flex:1;
+    background-color: #f5f3ef;
 
 }
 
 .content{
 width: 700px;
 justify-content: center;
-min-height:65vh;
+min-height:60vh;
 
 }
 

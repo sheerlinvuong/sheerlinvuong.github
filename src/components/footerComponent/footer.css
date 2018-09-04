@@ -1,6 +1,6 @@
 
 .footer {
-  background: linear-gradient(to bottom right, #EFADA0, #FFDB8A);
+
   display:flex;
   align-items: center;
   justify-content: center;
@@ -13,3 +13,5 @@
   #footer img:hover {
     fill: #fce57e;
 }
+
+/*background: linear-gradient(to bottom right, #EFADA0, #FFDB8A);*/
