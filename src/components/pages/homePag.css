@@ -11,12 +11,14 @@
   padding-left: 20px;
   grid-column: 2;
   grid-row: 1;
+  font-family: 'Roboto', sans-serif;
     }
 
     .Bio-body {
       font-size: large;
       grid-column: 2;
-      grid-row: 2
+      grid-row: 2;
+      font-weight: 300;
     }
 
 
@@ -40,9 +42,9 @@
   .Bio-header {
     grid-row: 1;
       }
-  
+
     .Bio-body {
       grid-row: 2
       }
 
-}    
+}

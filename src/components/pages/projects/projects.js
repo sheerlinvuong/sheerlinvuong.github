@@ -9,13 +9,13 @@ class Projects extends Component {
       <div>
         <div className="Proj">
           <header className="Proj-header">
-            <h1>Hooking Your Web Contact Form to Telegram</h1>
+            <p>Hooking Your Web Contact Form to Telegram</p>
           </header>
           <img src={WebformGif} width="700" />
           <body className="Proj-body">
             <p>
-              A simple messaging bot with Node.js.
-              <br /> <br />
+              <br />A simple messaging bot with Node.js.
+              <br />
               Instead of receiving contact form messages in my e-mail, I used a
               telegram bot to relay them to me.
               <br />
@@ -32,6 +32,7 @@ class Projects extends Component {
               }}
             >
               {' '}
+              <br />
               Want one for your website? Click here to read the tutorial I wrote
               on Medium.
             </a>
@@ -40,7 +41,7 @@ class Projects extends Component {
 
         <div className="Proj">
           <header className="Proj-header">
-            <h1>WhoDat App</h1>
+            <p>WhoDat App</p>
           </header>
           <body className="Proj-body">
             <img src={WhoDatGif} width="250" />
