@@ -16,7 +16,7 @@ class App extends Component {
       <Router>
         <div className="wrapper">
           {/* <HomePage /> */}
-          <NavBar className="nav" />
+          <NavBar className="header" />
           <div className="content">
             <Switch>
               <Route exact path="/" component={HomePage} />

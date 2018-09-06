@@ -1,7 +1,9 @@
 .Bio {
     display: grid;
-    grid-template-columns: 15em auto;
+    grid-template-columns: 200px 500px;
     grid-template-rows: 10em auto;
+     align-content: center;
+    justify-content: center;
     }
 
 .Bio-header {
@@ -12,6 +14,7 @@
   grid-column: 2;
   grid-row: 1;
   font-family: 'Roboto', sans-serif;
+  justify-self: center;
     }
 
     .Bio-body {
@@ -19,6 +22,7 @@
       grid-column: 2;
       grid-row: 2;
       font-weight: 300;
+      justify-self: center;
     }
 
 
@@ -28,7 +32,7 @@
     }
 
     .picbox img {
-      max-width:100%;
+      max-width:200px;
       border-radius: 50%;
       margin-right: 50px;
       margin-top: 40px;

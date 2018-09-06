@@ -1,8 +1,10 @@
+
 .Proj {
     display: grid;
     padding:  5px;
     padding-bottom: 50px;
-
+    align-content: center;
+    justify-content: center;
     }
 
     .Proj-header {
@@ -12,6 +14,7 @@
       padding-bottom: 30px;
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
+      justify-self: center;
     }
 
     .Proj-body {
@@ -20,10 +23,12 @@
       color: rgb(82, 82, 82);
       word-wrap: break-word;
       font-weight: 300;
+      justify-self: center;
     }
 
     .Proj-body img {
       float: left;
       padding-right: 25px;
+      justify-self: center;
 
   }
