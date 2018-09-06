@@ -118,13 +118,13 @@ class Contact extends Component {
             />
           </div>
 
-          <ReCaptcha
-            className="recaptcha"
-            ref="recaptcha"
-            sitekey="6LdeiGYUAAAAAIAihGaRFl-FZBLqRXf8DhC7lu9h"
-            onChange={this.handleRecaptcha}
-          />
-          <div>
+          <div className="submitArea">
+            <ReCaptcha
+              className="recaptcha"
+              ref="recaptcha"
+              sitekey="6LdeiGYUAAAAAIAihGaRFl-FZBLqRXf8DhC7lu9h"
+              onChange={this.handleRecaptcha}
+            />
             <button type="submit">Submit</button>
           </div>
         </form>
