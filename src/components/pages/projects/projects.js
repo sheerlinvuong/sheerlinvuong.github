@@ -7,7 +7,7 @@ class Projects extends Component {
   render() {
     return (
       <div>
-        <div className="Proj">
+        <div className="Proj1">
           <header className="Proj-header">
             <p>Hooking Your Web Contact Form to Telegram</p>
           </header>
@@ -33,13 +33,13 @@ class Projects extends Component {
             >
               {' '}
               <br />
-              Want one for your website? Click here to read the tutorial I wrote
-              on Medium.
+              -> Want one for your website? Click here to read the tutorial I
+              wrote on Medium.
             </a>
           </body>
         </div>
 
-        <div className="Proj">
+        <div className="Proj2">
           <header className="Proj-header">
             <p>WhoDat App</p>
           </header>
