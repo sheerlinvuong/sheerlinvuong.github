@@ -1,38 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:100,300,400');
-
-
-    .CV-body {
-      line-height: normal;
-      font-style: normal;
-    }
-
-
-.date{
-text-align:right;
-}
-
-.positionTitle{
-  font-size: 1em;
-  font-family: Roboto;
+.resume {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
   color: rgb(38, 50, 90);
 
+  width: 600px;
 
-}
-
-.t {
-  font-family: Roboto;
-  font-style: normal;
-}
-
-.ts {
-  font-family: 'Open Sans', sans-serif;
-}
-le{
- padding-left: 0px;
- margin-left: 0px;
-}
-
-.resume {
   justify-content: center;
-  text-align: center;
+  text-align: left;
+  font-size: 14px;
+  padding-bottom: 70px;
+  padding-left: 50px;
 }
+
+.resume-bio {
+  padding-bottom: 10px;
+}
+.resume-text {
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
