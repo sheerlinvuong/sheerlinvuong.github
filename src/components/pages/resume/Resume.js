@@ -5,7 +5,7 @@ class Resume extends Component {
   render() {
     return (
       <div className="resume">
-        <a href="CVSheerlin.pdf">
+        <a href="./CVSheerlin.pdf">
           {' '}
           Download my resume in PDF here! <br />
           <br />
