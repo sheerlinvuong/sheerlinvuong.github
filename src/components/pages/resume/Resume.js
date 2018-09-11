@@ -5,8 +5,7 @@ class Resume extends Component {
   render() {
     return (
       <div className="resume">
-        <iframe src="https://docs.google.com/document/d/e/2PACX-1vSPfhlCn3jT_rJogzc7pNLOWmrBEkgPsEqMhlFPqfxrPAk5gQbI1Z-i1soawnuBcZa_5B48rVC9H9ek/pub?embedded=true" />
-        <a href="./CVSheerlin.pdf">
+        <a href="https://docs.google.com/document/d/e/2PACX-1vSPfhlCn3jT_rJogzc7pNLOWmrBEkgPsEqMhlFPqfxrPAk5gQbI1Z-i1soawnuBcZa_5B48rVC9H9ek/pub">
           {' '}
           Download my resume in PDF here! <br />
           <br />
