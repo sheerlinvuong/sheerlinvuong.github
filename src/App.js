@@ -5,8 +5,6 @@ import { Switch } from 'react-router-dom';
 import NavBar from './components/headerComponent/navBar.js';
 import Footer from './components/footerComponent/footer.js';
 import HomePage from './components/pages/homePage.js';
-import Resume from './components/pages/resume/Resume';
-import Projects from './components/pages/projects/projects';
 import Contact from './components/pages/contact/contact';
 import './App.css';
 
@@ -20,8 +18,6 @@ class App extends Component {
           <div className="content">
             <Switch>
               <Route exact path="/" component={HomePage} />
-              <Route path="/resume" component={Resume} />
-              <Route path="/projects" component={Projects} />
               <Route path="/contact" component={Contact} />
             </Switch>
           </div>
