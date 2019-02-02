@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './homePag.css';
+import { BioSt } from './homePage.styles';
 import pic from './pic.png';
-import Projects from './projects/projects';
-import Resume from './resume/Resume';
+// import Projects from './projects/projects';
+// import Resume from './resume/Resume';
 
 class HomePage extends Component {
   state = {};
@@ -24,7 +24,12 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <div className="Bio">
+        <BioSt>
+          {!this.state.isMobile && (
+            <picture className="picbox">
+              <img src={pic} alt="pic" />
+            </picture>
+          )}
           <header className="Bio-header">
             <h1>Hello, I'm Sheerlin </h1>
           </header>
@@ -33,14 +38,9 @@ class HomePage extends Component {
             <p>This website is currrently under construction</p>
             <p>It is best viewed in desktop </p>
           </body>
-          {!this.state.isMobile && (
-            <picture className="picbox">
-              <img src={pic} alt="pic" />
-            </picture>
-          )}
-        </div>
-        <Projects />
-        <Resume />
+        </BioSt>
+        {/* <Projects /> */}
+        {/* <Resume /> */}
       </div>
     );
   }

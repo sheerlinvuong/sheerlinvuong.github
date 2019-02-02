@@ -21,7 +21,7 @@ class SocialIcons extends Component {
   render() {
     return (
       <SocialIconsSt>
-        <ul style={{ flex: 1, flexDirection: 'column' }}>
+        <ul>
           <a href="https://www.instagram.com/sheerlin/">
             <img src={instagram} height="15px" />
           </a>

@@ -13,13 +13,13 @@ class App extends Component {
     return (
       <Router>
         <div className="wrapper">
-          <NavBar className="header" />
+          <NavBar />
           <div className="content">
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route path="/contact" component={Contact} />
             </Switch>
-            <SocialIcons className="social-icons" />
+            <SocialIcons />
           </div>
         </div>
       </Router>

@@ -3,9 +3,12 @@
   background-color: #f5f3ef;
   flex-direction: column;
   width: 100%;
+  min-height: 100vh;
+  display: block;
 }
 
 .content {
-  width: 100%;
-  min-height: 100vh;
+  height: 100%;
+  flex: 1;
+  flex-direction: row;
 }
