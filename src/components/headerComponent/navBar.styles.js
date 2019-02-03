@@ -19,21 +19,16 @@ export const NavWrapper = styled.div`
     font-weight: 300;
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
-    border: 1px solid red;
     ${device.tablet} {
       padding: 20px;
       font-size: 15px;
-      border: 1px solid blue;
     }
-    ${device.laptop}{
-    border: 1px solid green
-  }
+
 `;
 
 export const LogoSt = styled.div`
   display: block;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0 50px 35px;
   font-size: 17px;
 
   ${device.tablet} {

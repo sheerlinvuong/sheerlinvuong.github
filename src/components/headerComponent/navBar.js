@@ -42,9 +42,8 @@ class NavBar extends Component {
                 textDecoration: 'none',
                 color: 'grey',
               }}
-              activeStyle={{ color: '	#00A86B' }}
             >
-              Resume
+              Curriculum Vitae
             </NavLink>
           </li>
           <li>
