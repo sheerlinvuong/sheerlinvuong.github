@@ -5,10 +5,10 @@
   width: 100%;
   min-height: 100vh;
   display: block;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .content {
   height: 100%;
-  flex: 1;
-  flex-direction: row;
 }
