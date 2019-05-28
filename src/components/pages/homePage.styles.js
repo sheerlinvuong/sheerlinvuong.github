@@ -1,24 +1,17 @@
 import styled from 'styled-components';
 import { theme, device } from '../theme';
 
-export const BioSt = styled.div`
+export const BioSt = styled.section`
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
   margin: 30px 0;
+  height: 100%;
 
   ${device.tablet} {
     justify-content: flex-start;
-    margin: 0 3rem 2rem;
-  }
-`;
-
-export const PictureSt = styled.div`
-  border: 1px solid red;
-  img {
-    max-width: 200px;
-    border-radius: 50%;
+    margin: 0 0 2rem 3rem;
   }
 `;
 

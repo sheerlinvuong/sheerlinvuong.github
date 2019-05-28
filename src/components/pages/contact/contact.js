@@ -132,6 +132,5 @@ class Contact extends Component {
     );
   }
 }
-console.log('');
 
 export default Contact;
