@@ -18,34 +18,10 @@ class NavBar extends Component {
               }}
               activeStyle={{ color: 'red' }}
             >
-              About
+              Work
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              exact
-              to="/projects"
-              style={{
-                textDecoration: 'none',
-                color: 'grey',
-              }}
-              activeStyle={{ color: 'lightsalmon' }}
-            >
-              Projects
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              exact
-              to="/resume"
-              style={{
-                textDecoration: 'none',
-                color: 'grey',
-              }}
-            >
-              Curriculum Vitae
-            </NavLink>
-          </li>
+
           <li>
             <NavLink
               exact
