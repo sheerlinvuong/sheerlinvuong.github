@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
-import './projects.css';
+import {
+  ProjectSt,
+  ProjectDescSt,
+  ProjectTitleSt,
+  WhoDatProj,
+  TelegramProj,
+} from './projects.styles';
 import WebformGif from './webform.gif';
 import WhoDatGif from './WhoDat.gif';
 
 class Projects extends Component {
   render() {
     return (
-      <div>
-        <div className="Proj1">
-          <header className="Proj-header">
-            <p>Hooking Your Web Contact Form to Telegram</p>
-          </header>
-          <img src={WebformGif} width="700" />
-          <body className="Proj-body">
+      <ProjectSt>
+        <h1>Projects</h1>
+        <TelegramProj>
+          <ProjectTitleSt>
+            Hooking Your Web Contact Form to Telegram
+          </ProjectTitleSt>
+          <img src={WebformGif} />
+          <ProjectDescSt>
             <p>
               <br />A simple messaging bot with Node.js.
               <br />
@@ -36,15 +43,13 @@ class Projects extends Component {
               -> Want one for your website? Click here to read the tutorial I
               wrote on Medium.
             </a>
-          </body>
-        </div>
+          </ProjectDescSt>
+        </TelegramProj>
 
-        <div className="Proj2">
-          <header className="Proj-header">
-            <p>WhoDat App</p>
-          </header>
-          <body className="Proj-body">
-            <img src={WhoDatGif} width="250" />
+        <WhoDatProj>
+          <ProjectTitleSt>WhoDat App</ProjectTitleSt>
+          <ProjectDescSt>
+            <img src={WhoDatGif} style={{ width: '30%' }} />
             <p>
               Easily recognise celebrities with WhoDat mobile app. <br />
               <br />
@@ -52,9 +57,9 @@ class Projects extends Component {
               accuracy appears. <br />I contributed to the design of the app as
               well as implementing the navigation and gallery screen. <br />
             </p>
-          </body>
-        </div>
-      </div>
+          </ProjectDescSt>
+        </WhoDatProj>
+      </ProjectSt>
     );
   }
 }
