@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BioSt, BgTriangle, PictureSt, TextSt } from './homePage.styles';
+import { BioSt, TextSt } from './homePage.styles';
 import Projects from '../projects/projects';
 import Resume from '../resume/Resume';
 
