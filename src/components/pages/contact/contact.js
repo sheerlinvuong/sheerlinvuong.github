@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import './contact.css';
-import ReCaptcha from 'react-google-recaptcha';
+import React, { Component } from "react";
+import "./contact.css";
+import ReCaptcha from "react-google-recaptcha";
 
 class Contact extends Component {
   state = {
     form: {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
     },
 
-    gToken: '',
+    gToken: ""
   };
   handleChange = event => {
     console.log(event.target.name);
@@ -19,15 +19,15 @@ class Contact extends Component {
     this.setState({
       form: {
         ...this.state.form,
-        [event.target.name]: event.target.value,
-      },
+        [event.target.name]: event.target.value
+      }
     });
   };
 
   handleRecaptcha = value => {
     console.log(value);
     this.setState({
-      gToken: value,
+      gToken: value
     });
   };
 
@@ -36,12 +36,13 @@ class Contact extends Component {
     const { name, email, subject, message } = this.state.form;
     const { gToken } = this.state;
 
-    const isInvalidForm = name === '' || email === '' || message === '';
+    const isInvalidForm =
+      name === "" || email === "" || subject === "" || message === "";
 
-    const isIncompleteRecaptcha = gToken === '';
+    const isIncompleteRecaptcha = gToken === "";
 
     if (isInvalidForm) {
-      alert('hey your form is incomplete, please answer all boxes');
+      alert("hey your form is incomplete, please answer all boxes");
       return;
     } // if no @ sign on email
     //message max 200 char
@@ -49,20 +50,20 @@ class Contact extends Component {
     //(required) in box
 
     if (isIncompleteRecaptcha) {
-      alert('please tick recaptcha');
+      alert("please tick recaptcha");
       return;
     }
 
-    const url = 'https://infinite-taiga-21063.herokuapp.com/';
+    const url = "https://infinite-taiga-21063.herokuapp.com/";
     //const url = 'http://localhost:8080';
     console.log(this.state);
     fetch(url, {
-      method: 'POST',
-      mode: 'cors',
+      method: "POST",
+      mode: "cors",
       body: JSON.stringify({ ...this.state.form, gToken }),
       headers: {
-        'Content-Type': 'application/json',
-      },
+        "Content-Type": "application/json"
+      }
     })
       .then(res => res.json())
       .catch(error => console.log(error))

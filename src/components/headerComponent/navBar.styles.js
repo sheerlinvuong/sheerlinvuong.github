@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { theme, device } from '../theme';
+import styled from "styled-components";
+import { device } from "../theme";
 
 export const NavWrapper = styled.div`
   display: flex;
