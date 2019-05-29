@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { theme, device } from '../theme';
+import styled from "styled-components";
+// import { theme, device } from '../theme';
 
 export const CVWrapper = styled.div`
   font-family: 'Open Sans', sans-serif;

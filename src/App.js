@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Switch } from 'react-router-dom';
-import NavBar from './components/headerComponent/navBar.js';
-import HomePage from './components/pages/homePage.js';
-import Contact from './components/pages/contact/contact';
-import { ContentSt, WrapperSt } from './App.styles';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Switch } from "react-router-dom";
+import NavBar from "./components/headerComponent/navBar.js";
+import HomePage from "./components/pages/homePage.js";
+import Contact from "./components/pages/contact/contact";
+import { ContentSt, WrapperSt } from "./App.styles";
 
 class App extends Component {
   render() {
