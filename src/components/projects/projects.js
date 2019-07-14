@@ -1,24 +1,24 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   ProjectSt,
   ProjectDescSt,
   ProjectTitleSt,
   WhoDatProj,
-  TelegramProj
-} from "./projects.styles";
-import WebformGif from "./webform.gif";
-import WhoDatGif from "./WhoDat.gif";
+  TelegramProj,
+} from './projects.styles';
+import WebformGif from './webform.gif';
+import WhoDatGif from './WhoDat.gif';
 
 class Projects extends Component {
   render() {
     return (
-      <ProjectSt>
+      <ProjectSt id="work">
         <h1>Projects</h1>
         <TelegramProj>
           <ProjectTitleSt>
             Hooking Your Web Contact Form to Telegram
           </ProjectTitleSt>
-          <img alt="telegram form" src={WebformGif} />
+          {/* <img alt="telegram form" src={WebformGif} />  so slow T_T*/}
           <ProjectDescSt>
             <p>
               <br />A simple messaging bot with Node.js.
@@ -34,11 +34,11 @@ class Projects extends Component {
             <a
               href="https://medium.com/@sheerlinvuong/hook-your-web-contact-form-to-telegram-f0c4ad442bfa"
               style={{
-                textDecoration: "none",
-                color: "black"
+                textDecoration: 'none',
+                color: 'black',
               }}
             >
-              {" "}
+              {' '}
               <br />
               -> Want one for your website? Click here to read the tutorial I
               wrote on Medium.
@@ -49,7 +49,7 @@ class Projects extends Component {
         <WhoDatProj>
           <ProjectTitleSt>WhoDat App</ProjectTitleSt>
           <ProjectDescSt>
-            <img alt="" src={WhoDatGif} style={{ width: "30%" }} />
+            {/* <img alt="" src={WhoDatGif} style={{ width: '30%' }} /> */}
             <p>
               Easily recognise celebrities with WhoDat mobile app. <br />
               <br />

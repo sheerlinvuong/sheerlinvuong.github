@@ -1,7 +1,7 @@
 -MVP-
-[] get rid of unused nav
-[] debug out old errors
-[] theme colors
+[x] get rid of unused nav
+[x] debug out old errors
+[x] theme colors
 [] theme fonts and weights
 [] hero page component (with scroll down button)
 [] teal heading component

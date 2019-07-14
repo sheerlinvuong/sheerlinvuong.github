@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 // import { theme, device } from '../theme';
 
 export const TelegramProj = styled.div`
@@ -27,7 +27,7 @@ export const ProjectSt = styled.div`
   flex-direction: column;
 
   h1 {
-    color: #fff;
+    color: #000;
     padding: 3rem;
   }
 `;
@@ -37,13 +37,13 @@ export const ProjectTitleSt = styled.div`
   font-size: 30px;
   text-align: center;
   padding-bottom: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   justify-self: center;
 `;
 
 export const ProjectDescSt = styled.div`
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   font-size: 15px;
   color: rgb(82, 82, 82);
