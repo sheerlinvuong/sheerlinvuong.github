@@ -1,40 +1,29 @@
 import React, { Component } from 'react';
-import './homePag.css';
-import pic from './pic.png';
+import * as S from './styles';
+import Projects from '../projects/projects';
+import Resume from '../resume/Resume';
+import heroImg from './hero-copy.png';
 
 class HomePage extends Component {
-  state = {};
-
-  handleWindowResize = () => {
-    this.setState({ isMobile: window.innerWidth <= 600 });
-  };
-
-  componentDidMount() {
-    window.addEventListener('load', this.handleWindowResize);
-    window.addEventListener('resize', this.handleWindowResize);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleWindowResize);
-    window.removeEventListener('load', this.handleWindowResize);
-  }
-
   render() {
     return (
-      <div className="Bio">
-        <header className="Bio-header">
-          <h1>Hello, I'm Sheerlin </h1>
-        </header>
-        <body className="Bio-body">
-          <p>Hello, I'm Sheerlin </p>
-          <p>This website is currrently under construction</p>
-          <p>It is best viewed in desktop </p>
-        </body>
-        {!this.state.isMobile && (
-          <picture className="picbox">
-            <img src={pic} alt="pic" />
-          </picture>
-        )}
+      <div>
+        <S.Bio>
+          <S.Content>
+            <S.Title>Hello</S.Title>
+            <S.Text>
+              I’m Sheerlin <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </S.Text>
+          </S.Content>
+          <S.Img src={heroImg} />
+        </S.Bio>
+        <Projects />
+        <Resume />
       </div>
     );
   }

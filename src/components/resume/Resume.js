@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './Resume.css';
+import { CVWrapper } from './CV.styles';
 
-class Resume extends Component {
+class CV extends Component {
   render() {
     return (
-      <div className="resume">
+      <CVWrapper>
         <a href="https://docs.google.com/document/d/e/2PACX-1vSPfhlCn3jT_rJogzc7pNLOWmrBEkgPsEqMhlFPqfxrPAk5gQbI1Z-i1soawnuBcZa_5B48rVC9H9ek/pub">
           {' '}
           Download my resume in PDF here! <br />
@@ -115,8 +115,8 @@ class Resume extends Component {
           <br />
           A-levels: Mathematics, Chemistry, Physics
         </p>
-      </div>
+      </CVWrapper>
     );
   }
 }
-export default Resume;
+export default CV;

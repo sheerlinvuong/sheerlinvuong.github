@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import './footer.css';
+import styled from 'styled-components';
 import instagram from './logo-instagram.svg';
 import github from './logo-github.svg';
 import twitter from './logo-twitter.svg';
 import email from './logo-email.svg';
 import medium from './logo-medium.svg';
 
-class Footer extends Component {
+const SocialIconsSt = styled.div`
+  display:flex;
+  flex-direction: column;
+  height: 100%
+  align-items: center;
+  img{
+    padding: 5px;
+  }
+`;
+
+class SocialIcons extends Component {
   render() {
     return (
-      <footer className="footer">
-        <ul style={{ flex: 1, flexDirection: 'column' }}>
+      <SocialIconsSt>
+        <ul>
           <a href="https://www.instagram.com/sheerlin/">
             <img src={instagram} height="15px" />
           </a>
@@ -30,25 +40,12 @@ class Footer extends Component {
           <a>
             <NavLink exact to="/contact">
               <img src={email} height="15px" />
-            </NavLink>{' '}
+            </NavLink>
           </a>
         </ul>
-      </footer>
+      </SocialIconsSt>
     );
   }
 }
 
-export default Footer;
-/* <div
-          style={{ backgroundColor: this.state.githuhover ? '#fff' : '#000' }}
-        >
-          <img
-            onMouseEnter={() => {
-              this.setState({ githuhover: true });
-            }}
-            onMouseLeave={() => {
-              this.setState({ githuhover: false });
-            }}
-            src={instagram}
-          />
-        </div> */
+export default SocialIcons;
