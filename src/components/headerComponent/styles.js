@@ -8,7 +8,7 @@ export const Nav = styled.div`
   justify-content: space-around;
   width: 100%;
   text-align: center;
-  padding: 50px 0;
+  padding: 4rem 0 6rem;
   color: ${theme.color.tuna};
 `;
 
