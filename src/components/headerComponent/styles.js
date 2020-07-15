@@ -3,37 +3,34 @@ import { device, theme } from '../theme';
 
 export const Nav = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
   width: 100%;
   text-align: center;
   padding: 4rem 0 6rem;
   color: ${theme.color.tuna};
+
+  ${device.tablet} {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 3rem 6rem;
+  }
 `;
 
 export const Links = styled.div`
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
   a {
-    display: none;
-    padding: 0.5em;
-    font-size: 1em;
-    margin-left: 0px;
-    font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 100;
-    ${device.tablet} {
-      display: inline;
-      padding: 20px;
-      font-size: 15px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: ${theme.color.teal};
+    text-decoration: none;
     }
-  }
+      ${device.tablet} {
+       padding:0.5rem;
+      font-size: 15px;
+      }
 `;
 
 export const Logo = styled.div`
-  margin: 0 auto;
-  font-size: 17px;
-
-  ${device.tablet} {
-    max-width: 50%;
-  }
+  font-size: 18px;
 `;
