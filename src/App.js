@@ -5,15 +5,14 @@ import NavBar from "./components/headerComponent/navBar.js";
 import HomePage from "./components/pages/homePage.js";
 import Contact from "./components/pages/contact/contact";
 import { ContentSt, WrapperSt } from "./App.styles";
-import { Cursor, mousePosition } from './components/worm/worm'
+import { WormyWorm } from './components/worm/worm'
 
 const App = () => {
-  const position = mousePosition()
 
   return (
     <Router>
       <WrapperSt>
-        <Cursor position={position} />
+        <WormyWorm />
         <NavBar />
         <ContentSt>
           <Switch>
@@ -24,7 +23,6 @@ const App = () => {
       </WrapperSt>
     </Router>
   )
-  // };
 
 }
 export default App;
