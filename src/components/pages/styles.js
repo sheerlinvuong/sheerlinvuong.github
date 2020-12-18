@@ -8,7 +8,6 @@ export const Bio = styled.section`
   justify-content: center;
   /* margin: 30px 0; */
 
-
   /* ${device.tablet} {
     justify-content: flex-start;
     margin: 0 0 2rem 3rem;

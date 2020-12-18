@@ -11,9 +11,9 @@ class HomePage extends Component {
         <S.Bio>
           <S.Content>
             <S.Title>Hello</S.Title>
+            <S.Text>I’m Sheerlin</S.Text>
+
             <S.Text>
-              I’m Sheerlin <br />
-              <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

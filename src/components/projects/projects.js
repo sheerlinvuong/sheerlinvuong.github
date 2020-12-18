@@ -4,7 +4,7 @@ import {
   ProjectDescSt,
   ProjectTitleSt,
   WhoDatProj,
-  TelegramProj,
+  TelegramProj
 } from './projects.styles';
 import WebformGif from './webform.gif';
 import WhoDatGif from './WhoDat.gif';
@@ -35,12 +35,12 @@ class Projects extends Component {
               href="https://medium.com/@sheerlinvuong/hook-your-web-contact-form-to-telegram-f0c4ad442bfa"
               style={{
                 textDecoration: 'none',
-                color: 'black',
+                color: 'black'
               }}
             >
               {' '}
               <br />
-              -> Want one for your website? Click here to read the tutorial I
+              -&gt; Want one for your website? Click here to read the tutorial I
               wrote on Medium.
             </a>
           </ProjectDescSt>

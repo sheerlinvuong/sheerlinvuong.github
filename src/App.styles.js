@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 // import { theme, device } from './components/theme';
 
 export const WrapperSt = styled.div`
