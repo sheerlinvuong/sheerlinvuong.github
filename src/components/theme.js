@@ -1,7 +1,8 @@
 export const device = {
   tablet: `@media (min-width: 425px)`,
   laptop: `@media (min-width: 1024px)`,
-  desktop: `@media (min-width: 2560px)`
+  // desktop: `@media (min-width: 2560px)`
+  desktop: `@media (min-width: 1900px)`
 };
 
 export const theme = {
