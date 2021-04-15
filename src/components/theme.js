@@ -12,7 +12,15 @@ export const theme = {
     teal: '#0E9B9B',
 
     dolphin: '#727279',
-    tuna: '#4A4D52'
+    tuna: '#4A4D52',
+
+    sky: '#DDEEFA',
+    textShadow: '#82B9E3',
+    sunnyYellow: '#FBE25F',
+    red: '#FF0000',
+    hillGreen: '#96AE24',
+    grassyGreen: '#BCD253',
+    checkeredYellow: 'rgba(245, 199, 96, 0.5)'
   },
   worm: {
     brilliantRose: '#FF5F9Dff',
@@ -23,6 +31,8 @@ export const theme = {
     electricBlue: '#00EAF9ff'
   },
   font: {
+    georgia: 'Georgia',
+    georgiaBold: 'Georgia Bold',
     roboto: 'Roboto, sans-serif',
     openSans: 'Open Sans, sans-serif',
     small: '1rem'

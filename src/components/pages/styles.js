@@ -1,12 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { theme, device } from '../theme';
 
-export const Bio = styled.section`
+export const Hero = styled.section`
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: center;
-  /* margin: 30px 0; */
+  height: 100vh;
+  position: relative;
+  color: white;
+  border: 2px solid red;
 
   /* ${device.tablet} {
     justify-content: flex-start;
@@ -15,43 +17,42 @@ export const Bio = styled.section`
 `;
 
 export const Content = styled.div`
-  height: 100%;
-  border: 1px solid black;
-  height: 65vh;
-  position: relative;
-  margin: 0 1.5rem 0 0;
-`;
-
-export const Text = styled.p`
-  font-family: 'Roboto Mono', monospace;
-  /* border: 1px solid red; */
-  color: ${theme.color.dolphin};
-  line-height: 28px;
-  font-size: 18px;
-  padding: 10px 20px;
-  position: absolute;
-  bottom: 10px;
-
-  /* h1 {
-    color: ${theme.color.grey};
-    font: ${theme.font.roboto}
-    padding-top: 20px;
-    padding-left: 20px;
-    border: 1px solid red;
-  } */
+  margin-top: 10%;
+  font-family: ${theme.font.georgiaBold};
+  padding: 0px 2.5rem;
+  z-index: 1;
 `;
 
 export const Title = styled.p`
-  font-family: ${theme.font.roboto};
-  font-size: 39vw;
-  color: black;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-  position: absolute;
-  top: -3.5rem;
+  font-size: 64px;
+  text-align: center;
+  text-shadow: -2px 2px 0px ${theme.color.textShadow};
+  position: relative;
+  padding-bottom: 4rem;
+`;
+
+export const Text = styled.p`
+  font-size: 20px;
+  text-shadow: 0px 2px 4px ${theme.color.textShadow};
+  line-height: 1.25;
+`;
+
+const Scatter = keyframes`
+  0% { top: 0; }
+  50% { top: -10px; }
+  100% { top: 0; }
 `;
 
 export const Img = styled.img`
-  width: 10vh;
+  position: relative;
+  width: 35%;
+  left: 55vw;
+  animation: ${Scatter} 1.75s infinite;
+  animation-delay: 0.22s;
+`;
+
+export const Clouds = styled.img`
+  position: absolute;
+  width: 100%;
+  bottom: -6rem;
 `;

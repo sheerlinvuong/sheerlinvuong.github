@@ -3,6 +3,7 @@ import { useTrail, animated } from 'react-spring';
 import styled from 'styled-components';
 import { theme } from '../theme';
 
+// disable on mobile or figure out what to do with it
 export const mousePosition = () => {
   const [position, setPosition] = useState([100, 100]);
   const [trail, setTrail] = useTrail(5, () => ({
