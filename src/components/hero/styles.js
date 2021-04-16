@@ -38,11 +38,35 @@ export const Hero = styled.section`
   }
 `;
 
+// export const Balloon = styled.div`
+//   position: absolute;
+//   animation: ${Scatter} 2.5s infinite;
+//   margin: 2rem 1.5rem 0;
+//   left: 0;
+// `;
+
 export const Balloon = styled.div`
   position: absolute;
   animation: ${Scatter} 2.5s infinite;
   margin: 2rem 1.5rem 0;
   left: 0;
+  & p {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+  }
+  & img {
+    width: 5rem;
+  }
+  ${device.laptop} {
+    margin: 2rem 2.5rem 0;
+    & p {
+      font-size: 20px;
+    }
+    & img {
+      width: 7rem;
+    }
+  }
 `;
 
 export const Contact = styled.div`
@@ -87,7 +111,6 @@ export const ImgWrapper = styled.div`
     left: auto;
     right: 0;
     bottom: 40%;
-    z-index: 10;
   }
   ${device.laptop} {
     bottom: 30vh;
@@ -99,7 +122,8 @@ export const Img = styled.img`
   position: relative;
   animation: ${Scatter} 1.75s infinite;
   animation-delay: 0.22s;
-  ${device.laptop} {
+  width: 10rem;
+  ${device.tablet} {
     width: 18rem;
   }
 `;
