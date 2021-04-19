@@ -1,7 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import * as S from './styles';
+import { Frame, Title, SubTitle } from '../pages/styles';
 // import balloonImg from './balloon.png';
 import balloonx2Img from './balloonx2.png';
+import portraitImg from './portrait.png';
+import cloudImg from './clouds.png';
+import cloudLImg from './cloud-left.png';
+import cloudRImg from './cloud-right.png';
 
 export const ContactButton = () => {
   return <S.Contact>Contact Me</S.Contact>;
@@ -13,6 +18,29 @@ export const Balloon = () => {
       <img src={balloonx2Img} />
       <p>Gallery</p>
     </S.Balloon>
+  );
+};
+
+export const Hero = () => {
+  return (
+    <Frame>
+      <Balloon />
+      <ContactButton />
+      <S.Content>
+        <Title>Hello</Title>
+        <SubTitle>
+          I’m Sheerlin, <br />a software developer based in London
+        </SubTitle>
+      </S.Content>
+      <S.ImgWrapper>
+        <S.Img src={portraitImg} />
+      </S.ImgWrapper>
+      <S.Cloud src={cloudImg} />
+      <S.CloudsWrapper>
+        <S.Clouds src={cloudLImg} />
+        <S.Clouds src={cloudRImg} />
+      </S.CloudsWrapper>
+    </Frame>
   );
 };
 

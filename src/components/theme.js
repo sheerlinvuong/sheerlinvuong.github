@@ -9,14 +9,9 @@ export const theme = {
   color: {
     white: '#ffffff',
     black: '#000000',
-    grey: '#6F6768',
-    teal: '#0E9B9B',
-
-    dolphin: '#727279',
-    tuna: '#4A4D52',
-
+    text: 'rgba(0, 0, 0, 0.65)',
     sky: '#DDEEFA',
-    textShadow: '#82B9E3',
+    cloudShadow: '#82B9E3',
     sunnyYellow: '#FBE25F',
     red: '#FF0000',
     hillGreen: '#96AE24',

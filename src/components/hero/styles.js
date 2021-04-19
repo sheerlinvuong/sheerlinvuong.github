@@ -7,37 +7,6 @@ const Scatter = keyframes`
   100% { top: 0; }
 `;
 
-export const Page = styled.div`
-  max-width: 1440px;
-  ${device.tablet} {
-    margin: 0 10vw;
-  }
-  ${device.desktop} {
-    width: 1440px;
-    margin: auto;
-  }
-`;
-
-export const Hero = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-  color: white;
-  border: 2px solid red;
-
-  ${device.tablet} {
-    border: 2px solid orange;
-  }
-  ${device.laptop} {
-    border: 2px solid yellow;
-  }
-  ${device.desktop} {
-    border: 2px solid green;
-  }
-`;
-
 // export const Balloon = styled.div`
 //   position: absolute;
 //   animation: ${Scatter} 2.5s infinite;
@@ -75,7 +44,7 @@ export const Contact = styled.div`
   width: fit-content;
   padding: 1rem;
   border-radius: 3rem;
-  box-shadow: -1px 4px 6px ${theme.color.textShadow};
+  box-shadow: -1px 4px 6px ${theme.color.cloudShadow};
   color: rgba(0, 0, 0, 0.65);
   margin: 1.5rem;
 `;
@@ -85,22 +54,7 @@ export const Content = styled.div`
   font-family: ${theme.font.georgiaBold};
   padding: 0px 2.5rem;
   z-index: 1;
-  /* border: 2px solid cyan; */
   max-width: 30rem;
-`;
-
-export const Title = styled.p`
-  position: relative;
-  font-size: 64px;
-  text-align: center;
-  text-shadow: -2px 2px 0px ${theme.color.textShadow};
-  padding-bottom: 4rem;
-`;
-
-export const Text = styled.p`
-  font-size: 20px;
-  text-shadow: 0px 2px 4px ${theme.color.textShadow};
-  line-height: 1.25;
 `;
 
 export const ImgWrapper = styled.div`
