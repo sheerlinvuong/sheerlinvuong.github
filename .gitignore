@@ -23,3 +23,5 @@ yarn-error.log*
 
 slnx.sqlite.vs
 test.js
+
+.eslintcache

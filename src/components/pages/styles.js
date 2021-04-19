@@ -1,58 +1,54 @@
 import styled from 'styled-components';
 import { theme, device } from '../theme';
 
-export const Bio = styled.section`
+export const Page = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
   justify-content: center;
-  /* margin: 30px 0; */
-
-
   /* ${device.tablet} {
-    justify-content: flex-start;
-    margin: 0 0 2rem 3rem;
+    margin: 0 10vw;
+  }
+  ${device.desktop} {
+    width: 1440px;
+    margin: auto;
   } */
 `;
 
-export const Content = styled.div`
-  height: 100%;
-  border: 1px solid black;
-  height: 65vh;
+export const Frame = styled.section`
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
   position: relative;
-  margin: 0 1.5rem 0 0;
-`;
+  color: white;
+  border: 2px solid red;
 
-export const Text = styled.p`
-  font-family: 'Roboto Mono', monospace;
-  /* border: 1px solid red; */
-  color: ${theme.color.dolphin};
-  line-height: 28px;
-  font-size: 18px;
-  padding: 10px 20px;
-  position: absolute;
-  bottom: 10px;
-
-  /* h1 {
-    color: ${theme.color.grey};
-    font: ${theme.font.roboto}
-    padding-top: 20px;
-    padding-left: 20px;
-    border: 1px solid red;
-  } */
+  ${device.tablet} {
+    border: 2px solid orange;
+    padding: 0 10vw;
+  }
+  ${device.laptop} {
+    border: 2px solid yellow;
+    max-width: 1440px;
+  }
+  ${device.desktop} {
+    border: 2px solid green;
+  }
 `;
 
 export const Title = styled.p`
-  font-family: ${theme.font.roboto};
-  font-size: 39vw;
-  color: black;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-  position: absolute;
-  top: -3.5rem;
+  position: relative;
+  font-size: 64px;
+  text-align: center;
+  text-shadow: -2px 2px 0px ${theme.color.cloudShadow};
+  padding-bottom: 4rem;
 `;
 
-export const Img = styled.img`
-  width: 10vh;
+export const SubTitle = styled.p`
+  font-size: 20px;
+  text-shadow: 0px 2px 4px ${theme.color.cloudShadow};
+  line-height: 1.25;
 `;

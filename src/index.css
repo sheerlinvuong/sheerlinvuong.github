@@ -1,10 +1,10 @@
-html,
-body {
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: white;
-
-  scroll-behavior: smooth;
+@font-face {
+  font-family: 'Georgia';
+  src: local('Georgia'), url(./fonts/Georgia.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Georgia Bold';
+  src: local('Georgia Bold'), url(./fonts/Georgia\ Bold.ttf) format('truetype');
 }
 
 * {
@@ -12,4 +12,12 @@ body {
   margin: 0px;
   padding: 0px;
   text-decoration: none;
+}
+
+html,
+body {
+  font-family: 'Georgia', sans-serif;
+  background-color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
