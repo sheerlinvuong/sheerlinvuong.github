@@ -9,13 +9,13 @@ class HomePage extends Component {
     return (
       <S.Page>
         <Hero />
-        <S.Frame>
-          {/* <S.Content>
-            <S.Title>Some things Ive built...</S.Title>
-            <S.Text>Here are some projects I have worked on in the past</S.Text>
-          {/* <Projects /> */}
-        </S.Frame>
-        {/* </S.Content>  */}
+        {/* <S.Frame>
+          <S.Title>Some things Ive built...</S.Title>
+          <S.SubTitle>
+            Here are some projects I have worked on in the past
+          </S.SubTitle>
+        </S.Frame> */}
+        {/* <Projects /> 
         {/* <Resume /> */}
         <Contact />
       </S.Page>

@@ -38,7 +38,7 @@ export const Balloon = styled.div`
   }
 `;
 
-export const Contact = styled.div`
+export const Contact = styled.a`
   align-self: flex-end;
   background-color: ${theme.color.sunnyYellow};
   width: fit-content;
@@ -47,6 +47,7 @@ export const Contact = styled.div`
   box-shadow: -1px 4px 6px ${theme.color.cloudShadow};
   color: rgba(0, 0, 0, 0.65);
   margin: 1.5rem;
+  cursor: pointer;
 `;
 
 export const Content = styled.div`

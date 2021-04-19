@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import ReCaptcha from 'react-google-recaptcha';
+import ReCAPTCHA from 'react-google-recaptcha';
 import * as S from './styles';
-
 class Contact extends Component {
   state = {
     form: {
@@ -10,12 +9,10 @@ class Contact extends Component {
       subject: '',
       message: ''
     },
-
     gToken: ''
   };
+  recaptchaRef = React.createRef();
   handleChange = (event) => {
-    console.log(event.target.name);
-    console.log(event.target.value);
     this.setState({
       form: {
         ...this.state.form,
@@ -25,7 +22,7 @@ class Contact extends Component {
   };
 
   handleRecaptcha = (value) => {
-    console.log(value);
+    // console.log(value);
     this.setState({
       gToken: value
     });
@@ -33,21 +30,20 @@ class Contact extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const { name, email, subject, message } = this.state.form;
+    const { name, email, message } = this.state.form;
     const { gToken } = this.state;
+    // const { recaptchaRef } = this.props;
+    // const recaptchaValue = recaptchaRef?.current?.getValue();
+    // console.log('recaptchaValue', recaptchaRef);
+    const isInvalidForm = name === '' || email === '' || message === '';
 
-    const isInvalidForm =
-      name === '' || email === '' || subject === '' || message === '';
-
-    const isIncompleteRecaptcha = gToken === '';
+    const isIncompleteRecaptcha = !gToken;
 
     if (isInvalidForm) {
-      alert('hey your form is incomplete, please answer all boxes');
+      alert('Your form is incomplete, please answer the required fields');
       return;
     } // if no @ sign on email
     //message max 200 char
-    //optional subject
-    //(required) in box
 
     if (isIncompleteRecaptcha) {
       alert('please tick recaptcha');
@@ -55,8 +51,7 @@ class Contact extends Component {
     }
 
     const url = 'https://infinite-taiga-21063.herokuapp.com/';
-    //const url = 'http://localhost:8080';
-    console.log(this.state);
+    // const url = 'http://localhost:8080';
     fetch(url, {
       method: 'POST',
       mode: 'cors',
@@ -65,15 +60,22 @@ class Contact extends Component {
         'Content-Type': 'application/json'
       }
     })
-      .then((res) => res.json())
-      .catch((error) => console.log(error))
-      .then((response) => console.log(response));
-    //.then(add reset recatpcta )
+      .catch((error) => console.log('error', error))
+      .then((response) => {
+        // console.log('res', response);
+        if (response.status === 200) {
+          // console.log('success & reset recapture');
+          // recaptchaRef?.current?.reset();
+        } else {
+          // console.log('not success');
+        }
+      });
   };
 
   render() {
+    const { recaptchaRef } = this.props;
     return (
-      <S.CheckeredFrame>
+      <S.CheckeredFrame id="contact">
         <S.FormWrapper>
           <S.Subtitle>
             Ask a question or say hello!
@@ -122,12 +124,12 @@ class Contact extends Component {
               />
             </S.FormItem>
             <S.SubmitArea>
-              {/* <ReCaptcha
-              className="recaptcha"
-              // ref={"recaptcha"}
-              sitekey="6LdeiGYUAAAAAIAihGaRFl-FZBLqRXf8DhC7lu9h"
-              onChange={this.handleRecaptcha}
-            /> */}
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey="6LdeiGYUAAAAAIAihGaRFl-FZBLqRXf8DhC7lu9h"
+                onChange={this.handleRecaptcha}
+                size="compact"
+              />
               <S.SubmitButton type="submit">Submit</S.SubmitButton>
             </S.SubmitArea>
           </form>

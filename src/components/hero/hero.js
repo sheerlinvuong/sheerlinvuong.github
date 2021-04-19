@@ -9,7 +9,7 @@ import cloudLImg from './cloud-left.png';
 import cloudRImg from './cloud-right.png';
 
 export const ContactButton = () => {
-  return <S.Contact>Contact Me</S.Contact>;
+  return <S.Contact href="#contact">Contact Me</S.Contact>;
 };
 
 export const Balloon = () => {

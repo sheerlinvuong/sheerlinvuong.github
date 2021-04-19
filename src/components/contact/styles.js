@@ -64,14 +64,17 @@ export const FormItem = styled.div`
 
 export const SubmitArea = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: inherit;
+  ${device.tablet} {
+    flex-direction: row;
+  }
 `;
 
 export const SubmitButton = styled.button`
   font-family: ${theme.font.georgia};
-  align-self: flex-end;
   background-color: ${theme.color.red};
   color: ${theme.color.white};
   padding: 1rem 2rem;
