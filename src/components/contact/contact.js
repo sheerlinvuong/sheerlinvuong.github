@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import * as S from './styles';
+
 class Contact extends Component {
   state = {
     form: {
@@ -50,9 +51,8 @@ class Contact extends Component {
       return;
     }
 
-    const url = 'https://infinite-taiga-21063.herokuapp.com/';
-    // const url = 'http://localhost:8080';
-    fetch(url, {
+    // const CONTACT_URL = 'http://localhost:8080';
+    fetch(process.env.REACT_APP_CONTACT_URL, {
       method: 'POST',
       mode: 'cors',
       body: JSON.stringify({ ...this.state.form, gToken }),
@@ -126,7 +126,7 @@ class Contact extends Component {
             <S.SubmitArea>
               <ReCAPTCHA
                 ref={recaptchaRef}
-                sitekey="6LdeiGYUAAAAAIAihGaRFl-FZBLqRXf8DhC7lu9h"
+                sitekey={process.env.REACT_APP_SITE_KEY}
                 onChange={this.handleRecaptcha}
                 size="compact"
               />

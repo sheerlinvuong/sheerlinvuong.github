@@ -1,5 +1,43 @@
 import styled from 'styled-components';
-// import { theme, device } from '../theme';
+import { theme, device } from '../theme';
+import {
+  Frame,
+  SubTitle as globalSubtitle,
+  Title as globalTitle
+} from '../pages/styles';
+
+export const GrassFrame = styled(Frame)`
+  background: linear-gradient(
+        135deg,
+        ${theme.color.hillGreen} 25%,
+        transparent 25%
+      ) -50px 0,
+    linear-gradient(225deg, ${theme.color.hillGreen} 25%, transparent 25%) -50px
+      0;
+  background-size: 52px 100px;
+  background-color: ${theme.color.grassyGreen};
+  background-repeat: repeat-x;
+  padding: 1rem;
+  height: auto;
+  ${device.tablet} {
+    border: 2px solid orange;
+    padding: 2rem;
+  }
+  ${device.laptop} {
+    border: 2px solid yellow;
+    max-width: 100%;
+  }
+  ${device.desktop} {
+    border: 2px solid green;
+  }
+`;
+
+export const Title = styled(globalTitle)`
+  font-family: ${theme.font.georgiaBold};
+  padding-top: 2.25rem;
+  text-shadow: -4px 4px 0px ${theme.color.hillGreen};
+  font-size: 58px;
+`;
 
 export const TelegramProj = styled.div`
   flex-direction: column;
@@ -25,6 +63,7 @@ export const WhoDatProj = styled.div`
 export const ProjectSt = styled.div`
   display: flex;
   flex-direction: column;
+  z-index: 10;
 
   h1 {
     color: #000;

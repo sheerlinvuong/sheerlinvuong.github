@@ -8,17 +8,19 @@ import {
 } from './projects.styles';
 import WebformGif from './webform.gif';
 import WhoDatGif from './WhoDat.gif';
+import { Frame, Title, SubTitle } from '../pages/styles';
+import * as S from './projects.styles';
 
 class Projects extends Component {
   render() {
     return (
-      <ProjectSt id="work">
-        <h1>Projects</h1>
+      <S.GrassFrame>
+        <S.Title>Personal projects</S.Title>
         <TelegramProj>
           <ProjectTitleSt>
             Hooking Your Web Contact Form to Telegram
           </ProjectTitleSt>
-          {/* <img alt="telegram form" src={WebformGif} />  so slow T_T*/}
+          <img alt="telegram form" src={WebformGif} />
           <ProjectDescSt>
             <p>
               <br />A simple messaging bot with Node.js.
@@ -46,10 +48,10 @@ class Projects extends Component {
           </ProjectDescSt>
         </TelegramProj>
 
-        <WhoDatProj>
+        {/* <WhoDatProj>
           <ProjectTitleSt>WhoDat App</ProjectTitleSt>
           <ProjectDescSt>
-            {/* <img alt="" src={WhoDatGif} style={{ width: '30%' }} /> */}
+            <img alt="" src={WhoDatGif} style={{ width: '30%' }} />
             <p>
               Easily recognise celebrities with WhoDat mobile app. <br />
               <br />
@@ -58,8 +60,9 @@ class Projects extends Component {
               well as implementing the navigation and gallery screen. <br />
             </p>
           </ProjectDescSt>
-        </WhoDatProj>
-      </ProjectSt>
+        </WhoDatProj> */}
+        {/* </ProjectSt> */}
+      </S.GrassFrame>
     );
   }
 }
