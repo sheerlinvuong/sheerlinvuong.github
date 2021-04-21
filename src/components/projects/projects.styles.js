@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 import { theme, device } from '../theme';
-import {
-  Frame,
-  SubTitle as globalSubtitle,
-  Title as globalTitle
-} from '../pages/styles';
+import { Frame, Title } from '../pages/styles';
 
 export const GrassFrame = styled(Frame)`
   background: linear-gradient(
@@ -17,11 +13,12 @@ export const GrassFrame = styled(Frame)`
   background-size: 52px 100px;
   background-color: ${theme.color.grassyGreen};
   background-repeat: repeat-x;
-  padding: 1rem;
+  padding: 1rem 1rem 0;
   height: auto;
+  color: ${theme.color.soilBrown};
   ${device.tablet} {
     border: 2px solid orange;
-    padding: 2rem;
+    padding: 2rem 2rem 0;
   }
   ${device.laptop} {
     border: 2px solid yellow;
@@ -32,60 +29,50 @@ export const GrassFrame = styled(Frame)`
   }
 `;
 
-export const Title = styled(globalTitle)`
+export const Heading = styled(Title)`
   font-family: ${theme.font.georgiaBold};
   padding-top: 2.25rem;
-  text-shadow: -4px 4px 0px ${theme.color.hillGreen};
   font-size: 58px;
+  color: ${theme.color.soilBrown};
+  text-shadow: -3px 3px 4px ${theme.color.hillGreen};
 `;
 
-export const TelegramProj = styled.div`
-  flex-direction: column;
-  width: 100%;
-  padding: 5px;
-  padding-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
-
-  img {
-    width: 75%;
-  }
-`;
-
-export const WhoDatProj = styled.div`
-  flex-direction: row;
-  padding: 5px;
-  padding-bottom: 50px;
-  align-content: center;
-  justify-content: center;
-`;
-
-export const ProjectSt = styled.div`
+export const Project = styled.div`
   display: flex;
   flex-direction: column;
-  z-index: 10;
+  align-items: center;
+  /* justify-content: center; */
+`;
 
-  h1 {
-    color: #000;
-    padding: 3rem;
+export const ImgWrapper = styled.div`
+  background-color: ${theme.color.soilBrown};
+  padding: 1rem;
+  border-radius: 0.75rem;
+  width: auto;
+
+  img {
+    width: 100%;
   }
 `;
 
-export const ProjectTitleSt = styled.div`
-  color: rgb(82, 82, 82);
-  font-size: 30px;
+export const ProjectHeading = styled.h2`
+  font-family: ${theme.font.georgiaBold};
+  text-shadow: -2px 2px 0px ${theme.color.hillGreen};
+  font-size: 34px;
   text-align: center;
-  padding-bottom: 30px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  justify-self: center;
+  padding: 2rem 0;
+  /* justify-self: center; */
 `;
 
-export const ProjectDescSt = styled.div`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 100;
-  font-size: 15px;
-  color: rgb(82, 82, 82);
+export const Description = styled.div`
+  font-family: ${theme.font.openSans};
+  font-weight: 200;
   word-wrap: break-word;
-  justify-self: center;
+  margin-bottom: 4rem;
+  p {
+    padding-bottom: 0.5rem;
+  }
+  p:last-child {
+    padding-top: 1.5rem;
+  }
 `;
