@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import WebformGif from './webform.gif';
-import WhoDatGif from './WhoDat.gif';
+import telegramGif from './telegram.gif';
+import telegramMp4 from './telegram.mp4';
+import whodatGif from './whodat.gif';
+import whodatMp4 from './whodat.mp4';
 import * as S from './projects.styles';
 
 class Projects extends Component {
@@ -10,7 +12,10 @@ class Projects extends Component {
         <S.Heading>Personal projects</S.Heading>
         <S.Project>
           <S.ImgWrapper style={{ width: '14rem' }}>
-            <img alt="" src={WhoDatGif} />
+            <video autoPlay={true} loop muted playsInline>
+              <source src={whodatMp4} type="video/mp4" />
+              <img alt="" src={whodatGif} />
+            </video>
           </S.ImgWrapper>
           <S.ProjectHeading>WhoDat</S.ProjectHeading>
           <S.Description>
@@ -32,7 +37,10 @@ class Projects extends Component {
         </S.Project>
         <S.Project>
           <S.ImgWrapper>
-            <img alt="telegram form" src={WebformGif} />
+            <video autoPlay loop muted playsInline>
+              <source src={telegramMp4} type="video/mp4" />
+              <img alt="telegram form" src={telegramGif} />
+            </video>
           </S.ImgWrapper>
           <S.ProjectHeading>
             Hooking Your Contact Form to Telegram

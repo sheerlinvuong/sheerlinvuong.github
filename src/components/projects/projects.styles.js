@@ -50,7 +50,7 @@ export const ImgWrapper = styled.div`
   border-radius: 0.75rem;
   width: auto;
 
-  img {
+  video {
     width: 100%;
   }
 `;
