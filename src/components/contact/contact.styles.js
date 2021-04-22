@@ -14,15 +14,10 @@ export const CheckeredFrame = styled(Frame)`
   padding: 1rem;
   height: auto;
   ${device.tablet} {
-    border: 2px solid orange;
     padding: 2rem;
   }
   ${device.laptop} {
-    border: 2px solid yellow;
     max-width: 100%;
-  }
-  ${device.desktop} {
-    border: 2px solid green;
   }
 `;
 

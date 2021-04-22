@@ -1,28 +1,17 @@
 import styled from 'styled-components';
 import { theme, device } from '../theme';
-import {
-  Frame,
-  SubTitle as globalSubtitle,
-  Title
-} from '../pages/homePage.styles';
+import { Frame } from '../pages/homePage.styles';
 
 export const HillFrame = styled(Frame)`
   padding: 6rem 2rem 10rem;
   height: auto;
   font-family: ${theme.font.georgiaBold};
   color: #2e82d0;
-
   ${device.tablet} {
-    border: 2px solid orange;
     padding: 4rem 2rem 7rem;
   }
-
   ${device.laptop} {
-    border: 2px solid yellow;
     max-width: 1440px;
-  }
-  ${device.desktop} {
-    border: 2px solid green;
   }
 `;
 

@@ -17,15 +17,10 @@ export const GrassFrame = styled(Frame)`
   height: auto;
   color: ${theme.color.soilBrown};
   ${device.tablet} {
-    border: 2px solid orange;
     padding: 2rem 2rem 4rem;
   }
   ${device.laptop} {
-    border: 2px solid yellow;
     max-width: 100%;
-  }
-  ${device.desktop} {
-    border: 2px solid green;
   }
 `;
 

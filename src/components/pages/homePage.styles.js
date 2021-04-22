@@ -7,13 +7,7 @@ export const Page = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* ${device.tablet} {
-    margin: 0 10vw;
-  }
-  ${device.desktop} {
-    width: 1440px;
-    margin: auto;
-  } */
+  background: linear-gradient(#97d4ff 0%, #ddeefa 30%);
 `;
 
 export const Frame = styled.section`
@@ -24,18 +18,12 @@ export const Frame = styled.section`
   height: 100vh;
   position: relative;
   color: white;
-  border: 2px solid red;
 
   ${device.tablet} {
-    border: 2px solid orange;
     padding: 0 10vw;
   }
   ${device.laptop} {
-    border: 2px solid yellow;
     max-width: 1440px;
-  }
-  ${device.desktop} {
-    border: 2px solid green;
   }
 `;
 
