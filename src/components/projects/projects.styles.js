@@ -13,12 +13,12 @@ export const GrassFrame = styled(Frame)`
   background-size: 52px 100px;
   background-color: ${theme.color.grassyGreen};
   background-repeat: repeat-x;
-  padding: 1rem 1rem 0;
+  padding: 1rem 1rem 4rem;
   height: auto;
   color: ${theme.color.soilBrown};
   ${device.tablet} {
     border: 2px solid orange;
-    padding: 2rem 2rem 0;
+    padding: 2rem 2rem 4rem;
   }
   ${device.laptop} {
     border: 2px solid yellow;
@@ -37,13 +37,6 @@ export const Heading = styled(Title)`
   text-shadow: -3px 3px 4px ${theme.color.hillGreen};
 `;
 
-export const Project = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-`;
-
 export const ImgWrapper = styled.div`
   background-color: ${theme.color.soilBrown};
   padding: 1rem;
@@ -55,20 +48,59 @@ export const ImgWrapper = styled.div`
   }
 `;
 
+export const MobProject = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ${ImgWrapper} {
+    width: 14rem;
+  }
+  ${device.tablet} {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    .content {
+      width: 50%;
+    }
+  }
+  ${device.laptop} {
+    max-width: 1440px;
+  }
+`;
+
+export const LandscapeProject = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+  ${device.tablet} {
+    padding: 0 2vw;
+    max-width: 700px;
+  }
+  ${device.laptop} {
+    max-width: 1440px;
+    flex-direction: row-reverse;
+    align-items: center;
+    .content {
+      width: 100%;
+      padding: 1rem;
+      padding-right: 2rem;
+    }
+  }
+`;
+
 export const ProjectHeading = styled.h2`
   font-family: ${theme.font.georgiaBold};
   text-shadow: -2px 2px 0px ${theme.color.hillGreen};
   font-size: 34px;
   text-align: center;
   padding: 2rem 0;
-  /* justify-self: center; */
 `;
 
 export const Description = styled.div`
   font-family: ${theme.font.openSans};
   font-weight: 200;
   word-wrap: break-word;
-  margin-bottom: 4rem;
   p {
     padding-bottom: 0.5rem;
   }

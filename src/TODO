@@ -1,14 +1,13 @@
 -MVP-
-[x] replace gifs with mp4
-[] projects component
-[] three.js experiments page (coming soon)
-[] COPY
-[] assets
 [] build at work component
+[] three.js experiments page (coming soon)
 [] contact form success and reset
 [] worm mouse for desktop only
+[x] replace gifs with mp4
+[x] projects component
 
 -Nice to have-
+[] 3D rotating flowers for the contact page
 [] scroll down animation on hero
 [] social icons with hover state
 [] optimize icons & svgs
