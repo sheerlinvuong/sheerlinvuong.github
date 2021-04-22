@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { theme, device } from '../theme';
-import { Frame, Title } from '../pages/styles';
+import { Frame, Title } from '../pages/homePage.styles';
 
 export const GrassFrame = styled(Frame)`
   background: linear-gradient(

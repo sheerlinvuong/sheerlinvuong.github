@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as S from './styles';
+import * as S from './homePage.styles';
 import { Hero } from '../hero/hero';
 import { Work } from '../work/work';
 import Projects from '../projects/projects';

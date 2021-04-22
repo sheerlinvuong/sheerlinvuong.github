@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { theme, device } from '../theme';
-import { Frame, SubTitle as globalSubtitle } from '../pages/styles';
+import { Frame, SubTitle as globalSubtitle } from '../pages/homePage.styles';
 
 export const CheckeredFrame = styled(Frame)`
   background-color: white;

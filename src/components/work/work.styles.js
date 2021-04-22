@@ -4,7 +4,7 @@ import {
   Frame,
   SubTitle as globalSubtitle,
   Title as globalTitle
-} from '../pages/styles';
+} from '../pages/homePage.styles';
 
 export const HillFrame = styled(Frame)`
   padding: 1rem 1rem 10rem;

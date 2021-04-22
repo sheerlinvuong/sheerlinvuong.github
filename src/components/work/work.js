@@ -1,6 +1,6 @@
 import React from 'react';
-import * as S from './styles';
-import { Title, SubTitle } from '../pages/styles';
+import * as S from './work.styles';
+import { Title, SubTitle } from '../pages/homePage.styles';
 
 export const Work = () => {
   return (

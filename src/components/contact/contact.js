@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import * as S from './styles';
+import * as S from './contact.styles';
 
 class Contact extends Component {
   state = {
