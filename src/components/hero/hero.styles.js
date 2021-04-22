@@ -101,7 +101,7 @@ export const CloudsWrapper = styled.div`
     bottom: -5vh;
   }
   ${device.laptop} {
-    width: 130%;
+    width: 115%;
     bottom: -12vh;
   }
 `;
@@ -109,6 +109,6 @@ export const CloudsWrapper = styled.div`
 export const Clouds = styled.img`
   max-width: 45%;
   ${device.laptop} {
-    max-width: 40%;
+    max-width: 36%;
   }
 `;

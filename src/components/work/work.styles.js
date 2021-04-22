@@ -7,11 +7,21 @@ export const HillFrame = styled(Frame)`
   height: auto;
   font-family: ${theme.font.georgiaBold};
   color: #2e82d0;
+  background: linear-gradient(
+        45deg,
+        ${theme.color.grassyGreen} 25px,
+        transparent 0
+      ) -1px 0,
+    linear-gradient(-45deg, ${theme.color.grassyGreen} 25px, transparent 0) 0px
+      0;
+  background-size: 52px 100px;
+  background-repeat: repeat-x;
+  background-position-y: 100%;
   ${device.tablet} {
     padding: 4rem 2rem 7rem;
   }
   ${device.laptop} {
-    max-width: 1440px;
+    max-width: 100%;
   }
 `;
 

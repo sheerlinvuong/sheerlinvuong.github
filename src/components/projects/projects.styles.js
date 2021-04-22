@@ -3,16 +3,7 @@ import { theme, device } from '../theme';
 import { Frame, Title } from '../pages/homePage.styles';
 
 export const GrassFrame = styled(Frame)`
-  background: linear-gradient(
-        135deg,
-        ${theme.color.hillGreen} 25%,
-        transparent 25%
-      ) -50px 0,
-    linear-gradient(225deg, ${theme.color.hillGreen} 25%, transparent 25%) -50px
-      0;
-  background-size: 52px 100px;
   background-color: ${theme.color.grassyGreen};
-  background-repeat: repeat-x;
   padding: 1rem 1rem 4rem;
   height: auto;
   color: ${theme.color.soilBrown};
