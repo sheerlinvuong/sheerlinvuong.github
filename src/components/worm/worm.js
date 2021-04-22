@@ -49,6 +49,7 @@ export const WormyWorm = () => {
 
 const MrWorm = styled.div`
   cursor: none;
+  /* z-index: 100; */
   opacity: 0.9;
   & > div {
     height: 100px;

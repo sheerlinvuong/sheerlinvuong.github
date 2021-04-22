@@ -24,7 +24,7 @@ export const Balloon = () => {
 export const Hero = () => {
   return (
     <Frame>
-      <Balloon />
+      {/* <Balloon /> */}
       <ContactButton />
       <S.Content>
         <Title>Hello</Title>
