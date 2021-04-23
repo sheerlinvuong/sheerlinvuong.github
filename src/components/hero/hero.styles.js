@@ -25,7 +25,7 @@ export const Balloon = styled.div`
     left: 20%;
   }
   & img {
-    width: 5rem;
+    width: 5.5rem;
   }
   ${device.laptop} {
     margin: 2rem 2.5rem 0;
