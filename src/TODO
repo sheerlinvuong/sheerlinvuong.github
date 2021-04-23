@@ -1,18 +1,15 @@
 -MVP-
-[x] get rid of unused nav
-[x] debug out old errors
-[x] theme colors
-[] theme fonts and weights
-[] hero page component (with scroll down button)
-[] teal heading component
-[] projects component
-[] contact form component
-[] COPY
-[] at work = under construction for now
+[] three.js experiments page (coming soon)
+[] contact form success and reset
+[] worm mouse for desktop only
+[x] replace gifs with mp4
+[x] projects component
+[x] build at work component
 
 -Nice to have-
+[] 3D rotating flowers for the contact page
+[] scroll down animation on hero
 [] social icons with hover state
-[] projects desktop version alt scroll
-[] at work I do - designs & COPY
-[] build at work component
-[] better favicons
+[] optimize icons & svgs
+[] email me for cv
+[] extend the work items to own page
