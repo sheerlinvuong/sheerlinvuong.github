@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { theme, device } from './components/theme';
+import { theme } from './components/theme';
 
 export const WrapperSt = styled.div`
   display: flex;
