@@ -16,8 +16,13 @@
 
 html,
 body {
+  cursor: none;
   font-family: 'Georgia', sans-serif;
   background-color: white;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+form {
+cursor: auto;
 }
