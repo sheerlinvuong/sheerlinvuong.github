@@ -3,7 +3,6 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import * as S from './contact.styles';
 
 export const Contact = () => {
-  // const recaptchaRef = React.createRef();
   const [gToken, setgToken] = useState('');
   const [form, setForm] = useState({
     name: '',
@@ -11,6 +10,7 @@ export const Contact = () => {
     subject: '',
     message: ''
   });
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (event) => {
     setForm({
@@ -23,19 +23,17 @@ export const Contact = () => {
     setgToken(value);
   };
 
+  function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const { name, email, message } = form;
-    console.log(name, email, message);
-    const isInvalidForm = name === '' || email === '' || message === '';
-
+    // const { name, email, message } = form;
+    // const isInvalidForm = name === '' || email === '' || message === '';
+    // console.log(validateEmail(email));
     const isIncompleteRecaptcha = !gToken;
-
-    // if (message.length > 10) {
-    //   alert('too long');
-    //   return;
-    // }
-    // if no @ sign on email
 
     if (isIncompleteRecaptcha) {
       alert('please tick recaptcha');
@@ -53,91 +51,89 @@ export const Contact = () => {
     })
       .catch((error) => console.log('error', error))
       .then((response) => {
-        if (response.status === 200) {
-          // console.log('success & reset recapture');
-          // recaptchaRef?.current?.reset();
+        if (response?.status === 200) {
+          setSuccess(true);
         } else {
-          // console.log('not success');
+          // console.log('not success'); backup to email?
         }
       });
   };
 
-  const success = false;
   return (
     <S.CheckeredFrame id="contact">
       <S.FormWrapper>
-        <S.Subtitle>
-          Ask a question or say hello!
-          <br /> Contact me here ☺ ☻
-        </S.Subtitle>
         {success && (
-          <>
+          <S.Success>
             <h1>Thank you for getting in touch!</h1>
             <p>
               Your message has been sent to my telegram successfully! I look
               forward to reading it and will get back to you soon.
             </p>
             <p>Have a nice day!</p>
-            {/* <S.SubmitButton type="submit">Send another</S.SubmitButton> */}
-          </>
+          </S.Success>
         )}
         {!success && (
-          <form onSubmit={handleSubmit}>
-            <S.FormItem>
-              <label htmlFor="name">Name:</label>
-              <input
-                id="name"
-                placeholder="(Required)"
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                required
-              />
-            </S.FormItem>
-            <S.FormItem>
-              <label>Email Address:</label>
-              <input
-                placeholder="(Required)"
-                type="text"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                required
-              />
-            </S.FormItem>
-            <S.FormItem>
-              <label>Subject:</label>
-              <input
-                placeholder="(Optional)"
-                type="text"
-                name="subject"
-                value={form.subject}
-                onChange={handleChange}
-              />
-            </S.FormItem>
-            <S.FormItem>
-              <label>Message:</label>
-              <textarea
-                placeholder="(Required)"
-                type="text"
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                required
-                spellCheck={true}
-              />
-            </S.FormItem>
-            <S.SubmitArea>
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={process.env.REACT_APP_SITE_KEY}
-                onChange={handleRecaptcha}
-                size="compact"
-              />
-              <S.SubmitButton type="submit">Submit</S.SubmitButton>
-            </S.SubmitArea>
-          </form>
+          <>
+            <S.Subtitle>
+              Ask a question or say hello!
+              <br /> Contact me here ☺ ☻
+            </S.Subtitle>
+            <form onSubmit={handleSubmit}>
+              <S.FormItem>
+                <label htmlFor="name">Name:</label>
+                <input
+                  id="name"
+                  placeholder="(Required)"
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                />
+              </S.FormItem>
+              <S.FormItem>
+                <label>Email Address:</label>
+                <input
+                  placeholder="(Required)"
+                  type="text"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                />
+              </S.FormItem>
+              <S.FormItem>
+                <label>Subject:</label>
+                <input
+                  placeholder="(Optional)"
+                  type="text"
+                  name="subject"
+                  value={form.subject}
+                  onChange={handleChange}
+                />
+              </S.FormItem>
+              <S.FormItem>
+                <label>Message:</label>
+                <textarea
+                  placeholder="(Required)"
+                  type="text"
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                  spellCheck={true}
+                />
+              </S.FormItem>
+              <S.SubmitArea>
+                <ReCAPTCHA
+                  sitekey={process.env.REACT_APP_SITE_KEY}
+                  onChange={handleRecaptcha}
+                  size="compact"
+                />
+                <S.SubmitButton type="submit">Submit</S.SubmitButton>
+              </S.SubmitArea>
+            </form>
+          </>
         )}
       </S.FormWrapper>
     </S.CheckeredFrame>
