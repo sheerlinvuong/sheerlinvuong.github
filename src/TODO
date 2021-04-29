@@ -1,16 +1,17 @@
 -MVP-
-[] contact form success and reset
 [] three.js experiments page (coming soon)
-[] worm mouse for desktop only
-[] make medium link more clear
+[] social icons with hover state
+[] scroll down animation on hero
+[x] contact form success
+[x] make medium link more clear
+[x] worm mouse for desktop only
 [x] replace gifs with mp4
 [x] projects component
 [x] build at work component
 
 -Nice to have-
 [] 3D rotating flowers for the contact page
-[] scroll down animation on hero
-[] social icons with hover state
+[] contact form error handing
 [] optimize icons & svgs
 [] email me for cv
 [] extend the work items to own page

@@ -60,18 +60,16 @@ class Projects extends Component {
                 messages to my telegram. <br /> I keep the express app running
                 24/7 using Heroku so I can receive messages at any time.
               </p>
-              <a
+              <p style={{ fontWeight: 'bold', padding: '1rem 0 2rem' }}>
+                Want one for your website? Click below to read the tutorial I
+                wrote on Medium.
+              </p>
+              <S.ButtonLink
+                target="_blank"
                 href="https://medium.com/@sheerlinvuong/hook-your-web-contact-form-to-telegram-f0c4ad442bfa"
-                style={{
-                  textDecoration: 'none',
-                  color: 'black'
-                }}
               >
-                {' '}
-                <br />
-                -&gt; Want one for your website? Click here to read the tutorial
-                I wrote on Medium.
-              </a>
+                Tutorial &#10140;
+              </S.ButtonLink>
               <p>
                 Made with: <br />
                 React, Express, Telegraf, Heroku

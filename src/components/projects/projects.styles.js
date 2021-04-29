@@ -91,6 +91,16 @@ export const Description = styled.div`
     padding-bottom: 0.5rem;
   }
   p:last-child {
-    padding-top: 1.5rem;
+    padding-top: 2rem;
   }
+`;
+
+export const ButtonLink = styled.a`
+  font-family: ${theme.font.georgia};
+  background-color: ${theme.color.red};
+  color: ${theme.color.white};
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  box-shadow: -1px 4px 6px ${theme.color.hillGreen};
+  margin-top: 1.5rem;
 `;

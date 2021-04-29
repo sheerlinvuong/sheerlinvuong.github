@@ -28,6 +28,9 @@ export const FormWrapper = styled.div`
   background-color: #eaba50;
   padding: 3rem 2rem;
   font-family: ${theme.font.georgiaBold};
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Subtitle = styled(globalSubtitle)`
@@ -93,3 +96,19 @@ export const SubmitButton = styled.button`
 //   margin - bottom: 16px;
 //   width: 300px;
 // }
+
+export const Success = styled.div`
+  text-align: center;
+  font-size: 18px;
+  color: ${theme.color.text};
+  h1 {
+    font-size: 30px;
+    padding: 1rem 0;
+  }
+  p {
+    padding-bottom: 1rem;
+  }
+  ${device.tablet} {
+    padding: 2rem;
+  }
+`;
