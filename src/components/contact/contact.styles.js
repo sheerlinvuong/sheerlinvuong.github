@@ -28,6 +28,7 @@ export const FormWrapper = styled.div`
   background-color: #eaba50;
   padding: 3rem 2rem;
   font-family: ${theme.font.georgiaBold};
+  min-height: 70vh;
 `;
 
 export const Subtitle = styled(globalSubtitle)`

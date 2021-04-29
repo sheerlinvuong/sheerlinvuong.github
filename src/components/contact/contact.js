@@ -1,50 +1,41 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import * as S from './contact.styles';
 
-class Contact extends Component {
-  state = {
-    form: {
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    },
-    gToken: ''
-  };
-  recaptchaRef = React.createRef();
-  handleChange = (event) => {
-    this.setState({
-      form: {
-        ...this.state.form,
-        [event.target.name]: event.target.value
-      }
+export const Contact = () => {
+  // const recaptchaRef = React.createRef();
+  const [gToken, setgToken] = useState('');
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (event) => {
+    setForm({
+      ...form,
+      [event.target.name]: event.target.value
     });
   };
 
-  handleRecaptcha = (value) => {
-    // console.log(value);
-    this.setState({
-      gToken: value
-    });
+  const handleRecaptcha = (value) => {
+    setgToken(value);
   };
 
-  handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    const { name, email, message } = this.state.form;
-    const { gToken } = this.state;
-    // const { recaptchaRef } = this.props;
-    // const recaptchaValue = recaptchaRef?.current?.getValue();
-    // console.log('recaptchaValue', recaptchaRef);
+    const { name, email, message } = form;
+    console.log(name, email, message);
     const isInvalidForm = name === '' || email === '' || message === '';
 
     const isIncompleteRecaptcha = !gToken;
 
-    if (isInvalidForm) {
-      alert('Your form is incomplete, please answer the required fields');
-      return;
-    } // if no @ sign on email
-    //message max 200 char
+    // if (message.length > 10) {
+    //   alert('too long');
+    //   return;
+    // }
+    // if no @ sign on email
 
     if (isIncompleteRecaptcha) {
       alert('please tick recaptcha');
@@ -55,14 +46,13 @@ class Contact extends Component {
     fetch(process.env.REACT_APP_CONTACT_URL, {
       method: 'POST',
       mode: 'cors',
-      body: JSON.stringify({ ...this.state.form, gToken }),
+      body: JSON.stringify({ ...form, gToken }),
       headers: {
         'Content-Type': 'application/json'
       }
     })
       .catch((error) => console.log('error', error))
       .then((response) => {
-        // console.log('res', response);
         if (response.status === 200) {
           // console.log('success & reset recapture');
           // recaptchaRef?.current?.reset();
@@ -72,16 +62,27 @@ class Contact extends Component {
       });
   };
 
-  render() {
-    const { recaptchaRef } = this.props;
-    return (
-      <S.CheckeredFrame id="contact">
-        <S.FormWrapper>
-          <S.Subtitle>
-            Ask a question or say hello!
-            <br /> Contact me here ☺ ☻
-          </S.Subtitle>
-          <form onSubmit={this.handleSubmit}>
+  const success = false;
+  return (
+    <S.CheckeredFrame id="contact">
+      <S.FormWrapper>
+        <S.Subtitle>
+          Ask a question or say hello!
+          <br /> Contact me here ☺ ☻
+        </S.Subtitle>
+        {success && (
+          <>
+            <h1>Thank you for getting in touch!</h1>
+            <p>
+              Your message has been sent to my telegram successfully! I look
+              forward to reading it and will get back to you soon.
+            </p>
+            <p>Have a nice day!</p>
+            {/* <S.SubmitButton type="submit">Send another</S.SubmitButton> */}
+          </>
+        )}
+        {!success && (
+          <form onSubmit={handleSubmit}>
             <S.FormItem>
               <label htmlFor="name">Name:</label>
               <input
@@ -89,8 +90,9 @@ class Contact extends Component {
                 placeholder="(Required)"
                 type="text"
                 name="name"
-                value={this.state.form.name}
-                onChange={this.handleChange}
+                value={form.name}
+                onChange={handleChange}
+                required
               />
             </S.FormItem>
             <S.FormItem>
@@ -99,8 +101,9 @@ class Contact extends Component {
                 placeholder="(Required)"
                 type="text"
                 name="email"
-                value={this.state.form.email}
-                onChange={this.handleChange}
+                value={form.email}
+                onChange={handleChange}
+                required
               />
             </S.FormItem>
             <S.FormItem>
@@ -109,8 +112,8 @@ class Contact extends Component {
                 placeholder="(Optional)"
                 type="text"
                 name="subject"
-                value={this.state.form.subject}
-                onChange={this.handleChange}
+                value={form.subject}
+                onChange={handleChange}
               />
             </S.FormItem>
             <S.FormItem>
@@ -119,24 +122,24 @@ class Contact extends Component {
                 placeholder="(Required)"
                 type="text"
                 name="message"
-                value={this.state.form.message}
-                onChange={this.handleChange}
+                value={form.message}
+                onChange={handleChange}
+                required
+                spellCheck={true}
               />
             </S.FormItem>
             <S.SubmitArea>
               <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey={process.env.REACT_APP_SITE_KEY}
-                onChange={this.handleRecaptcha}
+                onChange={handleRecaptcha}
                 size="compact"
               />
               <S.SubmitButton type="submit">Submit</S.SubmitButton>
             </S.SubmitArea>
           </form>
-        </S.FormWrapper>
-      </S.CheckeredFrame>
-    );
-  }
-}
-
-export default Contact;
+        )}
+      </S.FormWrapper>
+    </S.CheckeredFrame>
+  );
+};
