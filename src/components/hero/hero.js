@@ -14,7 +14,7 @@ export const ContactButton = () => {
 
 export const Balloon = () => {
   return (
-    <S.Balloon>
+    <S.Balloon to="/fun">
       <img src={balloonx2Img} />
       <p>just for fun</p>
     </S.Balloon>
@@ -24,7 +24,7 @@ export const Balloon = () => {
 export const Hero = () => {
   return (
     <Frame>
-      {/* <Balloon /> */}
+      <Balloon />
       <ContactButton />
       <S.Content>
         <Title>Hello</Title>

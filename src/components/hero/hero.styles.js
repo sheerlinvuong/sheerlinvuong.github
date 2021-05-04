@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { theme, device } from '../theme';
+import { Link } from 'react-router-dom';
 
 const Scatter = keyframes`
   0% { top: 0; }
@@ -14,7 +15,7 @@ const Scatter = keyframes`
 //   left: 0;
 // `;
 
-export const Balloon = styled.div`
+export const Balloon = styled(Link)`
   position: absolute;
   animation: ${Scatter} 2.5s infinite;
   margin: 2rem 1.5rem 0;
