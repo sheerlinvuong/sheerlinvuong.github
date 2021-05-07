@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import instagram from './logo-instagram.svg';
-import github from './logo-github.svg';
-import twitter from './logo-twitter.svg';
-import email from './logo-email.svg';
-import medium from './logo-medium.svg';
+import { IconEmail, IconGithub, IconLinkedin, IconMedium } from './Icons';
 
 const SocialIconsSt = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
-  height: 100%
+  height: 100%;
   align-items: center;
-  img{
+  img {
     padding: 5px;
   }
 `;
@@ -22,26 +17,24 @@ class SocialIcons extends Component {
     return (
       <SocialIconsSt>
         <ul>
-          <a href="https://www.instagram.com/sheerlin/">
-            <img src={instagram} height="15px" />
-          </a>
+          <IconEmail />
+          <IconGithub />
+          <IconLinkedin />
+          <IconMedium />
+          {/* <IconTwitter href="https://twitter.com/sheerlinonline"/> */}
+          {/* <IconInstagram href="https://www.instagram.com/sheerlin/"/> */}
 
-          <a href="https://github.com/sheerlinvuong">
-            <img src={github} height="15px" />
+          {/* <a href="https://github.com/sheerlinvuong">
+            <img src={IconGithub} height="15px" />
           </a>
-
           <a href="https://medium.com/@sheerlinvuong">
             <img src={medium} height="15px" />
-          </a>
-          <a href="https://twitter.com/sheerlinonline">
-            <img src={twitter} height="15px" />
-          </a>
-
-          <a>
+          </a> */}
+          {/* <a> // mailTo instead
             <NavLink exact to="/contact">
               <img src={email} height="15px" />
             </NavLink>
-          </a>
+          </a> */}
         </ul>
       </SocialIconsSt>
     );
