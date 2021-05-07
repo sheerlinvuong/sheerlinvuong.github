@@ -16,8 +16,21 @@
 
 html,
 body {
+  cursor: none;
   font-family: 'Georgia', sans-serif;
   background-color: white;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+form {
+cursor: auto;
+}
+
+.webgl {
+  cursor: auto;
+  position: fixed;
+  top: 0;
+  left:0;
+  outline: none;
 }

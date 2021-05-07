@@ -1,77 +1,64 @@
-import React, { useEffect, useState } from 'react';
-import { useTrail, animated } from 'react-spring';
+import React from 'react';
+import { animated } from 'react-spring';
 import styled from 'styled-components';
 import { theme } from '../theme';
+import PropTypes from 'prop-types';
+import { mousePosition } from './wormHooks';
 
-// disable on mobile or figure out what to do with it
-export const mousePosition = () => {
-  const [position, setPosition] = useState([100, 100]);
-  const [trail, setTrail] = useTrail(5, () => ({
-    position,
-    config: { tension: 1000, friction: 65 }
-  }));
-  useEffect(() => {
-    document.addEventListener('mousemove', (e) => {
-      const xy = [e.clientX, e.clientY];
-      setPosition(xy);
-      setTrail({ position: xy });
-    });
-  }, []);
-
-  return {
-    position,
-    trail
-  };
+const isMobile = () => {
+  const ua = navigator.userAgent;
+  return /Android|Mobi/i.test(ua);
 };
-export const WormyWorm = () => {
-  const { position, trail } = mousePosition();
+
+export const WormyWorm = ({ isActive }) => {
+  if (typeof navigator !== 'undefined' && isMobile()) return null;
+  const { position, trail, hidden } = mousePosition(isActive);
   const trans = (x, y) =>
     `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`;
 
   return (
-    <MrWorm>
-      <WormHead transform={trans(position[0], position[1])}>
-        <WormFace />
-      </WormHead>
+    <MrWorm isHidden={hidden}>
       {trail.map((props, i) => (
         <animated.div
           key={i}
           style={{
-            transform: props.position.interpolate(trans),
-            background: Object.values(theme.worm)[i],
+            transform: props.position?.interpolate(trans),
+            background: Object.values(theme.worm)[Math.floor((i / 20) * 6)],
             zIndex: -i
           }}
         />
       ))}
+      <WormHead transform={trans(position[0], position[1])}>
+        <WormFace />
+      </WormHead>
     </MrWorm>
   );
 };
 
 const MrWorm = styled.div`
-  cursor: none;
-  opacity: 0.9;
+  pointer-events: none;
+  transition: all 500ms ease;
+  transition-property: opacity;
+  opacity: ${(props) => (props.isHidden ? 0 : 0.95)};
+  z-index: 100;
   & > div {
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
     position: fixed;
     border-radius: 50%;
   }
 `;
-
-const WormHead = styled.div.attrs({
-  style: (props) => ({
-    transform: `${props.transform}`
-  })
-})`
+const WormHead = styled.div.attrs((props) => ({
+  style: { transform: props.transform }
+}))`
   background: ${theme.worm.brilliantRose};
-  z-index: 1;
 `;
 
 const WormFace = (props) => {
   return (
     <svg
-      width={100}
-      height={100}
+      width={60}
+      height={60}
       viewBox="0 0 128 128"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -92,4 +79,9 @@ const WormFace = (props) => {
       />
     </svg>
   );
+};
+
+WormyWorm.propTypes = {
+  position: PropTypes.arrayOf(PropTypes.number),
+  isActive: PropTypes.bool
 };

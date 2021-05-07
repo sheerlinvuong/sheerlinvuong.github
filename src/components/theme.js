@@ -16,7 +16,8 @@ export const theme = {
     red: '#FF0000',
     hillGreen: '#96AE24',
     grassyGreen: '#BCD253',
-    checkeredYellow: 'rgba(245, 199, 96, 0.5)'
+    checkeredYellow: 'rgba(245, 199, 96, 0.5)',
+    soilBrown: '#6D401A'
   },
   worm: {
     brilliantRose: '#FF5F9Dff',

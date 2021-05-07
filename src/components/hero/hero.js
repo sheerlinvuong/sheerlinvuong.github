@@ -1,6 +1,6 @@
 import React from 'react';
-import * as S from './styles';
-import { Frame, Title, SubTitle } from '../pages/styles';
+import * as S from './hero.styles';
+import { Frame, Title, SubTitle } from '../pages/homePage.styles';
 // import balloonImg from './balloon.png';
 import balloonx2Img from './balloonx2.png';
 import portraitImg from './portrait.png';
@@ -14,7 +14,7 @@ export const ContactButton = () => {
 
 export const Balloon = () => {
   return (
-    <S.Balloon>
+    <S.Balloon to="/gallery">
       <img src={balloonx2Img} />
       <p>Gallery</p>
     </S.Balloon>
