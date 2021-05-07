@@ -14,7 +14,7 @@ export const ContactButton = () => {
 
 export const Balloon = () => {
   return (
-    <S.Balloon to="/fun">
+    <S.Balloon to="/gallery">
       <img src={balloonx2Img} />
       <p>Gallery</p>
     </S.Balloon>
