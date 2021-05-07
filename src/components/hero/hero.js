@@ -16,7 +16,7 @@ export const Balloon = () => {
   return (
     <S.Balloon to="/fun">
       <img src={balloonx2Img} />
-      <p>just for fun</p>
+      <p>Gallery</p>
     </S.Balloon>
   );
 };

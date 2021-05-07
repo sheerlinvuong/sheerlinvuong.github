@@ -1,7 +1,7 @@
 -MVP-
-[] three.js experiments page (coming soon) + style balloon link
 [] social icons with hover state
 [] scroll down animation on hero
+[x] three.js experiments page (coming soon) + style balloon link
 [x] contact form success
 [x] make medium link more clear
 [x] worm mouse for desktop only
@@ -11,7 +11,7 @@
 
 -Nice to have-
 [] 3D rotating flowers for the contact page
-[] better contact form validation
 [] optimize icons & svgs
 [] email me for cv
 [] extend the work items to own page
+[x] better contact form validation

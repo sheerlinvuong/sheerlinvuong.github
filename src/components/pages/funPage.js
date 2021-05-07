@@ -2,26 +2,12 @@ import React, { useEffect } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
-/**
- *      TODO
- * [] avoid donuts rendering near text
- * [] window resize event listener
- * [] nicer font
- * [] remove axis helper and console.logs
- * [x] max zoom out
- * [x] center text
- * [x] camera start at distance
- */
-
 export const FunPage = () => {
   useEffect(() => {
     /**
      * Scene
      **/
     const scene = new THREE.Scene();
-    // axis helper
-    // const axisHelper = new THREE.AxesHelper();
-    // scene.add(axisHelper);
 
     /**
      * Objects
@@ -70,16 +56,28 @@ export const FunPage = () => {
     );
 
     /**
-     * Camera
+     * Sizes
      **/
     const sizes = {
       width: window.innerWidth,
       height: window.innerHeight
     };
+    window.addEventListener('resize', () => {
+      sizes.width = window.innerWidth;
+      sizes.height = window.innerHeight;
+
+      camera.aspect = sizes.width / sizes.height;
+      camera.updateProjectionMatrix();
+
+      renderer.setSize(sizes.width, sizes.height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    });
+
+    /**
+     * Camera
+     **/
     const camera = new THREE.PerspectiveCamera(55, sizes.width / sizes.height);
-    camera.position.x = 10;
-    camera.position.y = -1;
-    camera.position.z = 10;
+    camera.position.set(5, -1, 2);
     scene.add(camera);
 
     /**
@@ -98,27 +96,18 @@ export const FunPage = () => {
     controls.enableDamping = true;
     controls.autoRotate = true;
     controls.minDistance = 5;
-    controls.maxDistance = 50;
+    controls.maxDistance = 20;
     renderer.render(scene, camera);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     /**
      * Animate
      */
-    const clock = new THREE.Clock();
-
     const tick = () => {
-      const elapsedTime = clock.getElapsedTime();
-
-      // Update controls
       controls.update();
-
-      // Render
       renderer.render(scene, camera);
-
-      // Call tick again on the next frame
       window.requestAnimationFrame(tick);
     };
-
     tick();
   }, []);
 

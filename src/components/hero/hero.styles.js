@@ -20,10 +20,11 @@ export const Balloon = styled(Link)`
   animation: ${Scatter} 2.5s infinite;
   margin: 2rem 1.5rem 0;
   left: 0;
+  color: white;
   & p {
     position: absolute;
-    top: 15%;
-    left: 20%;
+    top: 18%;
+    left: 21%;
   }
   & img {
     width: 5.5rem;
