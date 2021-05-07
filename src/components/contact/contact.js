@@ -11,6 +11,7 @@ export const Contact = () => {
     message: ''
   });
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (event) => {
     setForm({
@@ -30,6 +31,7 @@ export const Contact = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setLoading(true);
     // const { name, email, message } = form;
     // const isInvalidForm = name === '' || email === '' || message === '';
     // console.log(validateEmail(email));
@@ -40,7 +42,6 @@ export const Contact = () => {
       return;
     }
 
-    // const CONTACT_URL = 'http://localhost:8080';
     fetch(process.env.REACT_APP_CONTACT_URL, {
       method: 'POST',
       mode: 'cors',
@@ -56,7 +57,8 @@ export const Contact = () => {
         } else {
           // console.log('not success'); backup to email?
         }
-      });
+      })
+      .finally(setLoading(false));
   };
 
   return (
@@ -130,7 +132,9 @@ export const Contact = () => {
                   onChange={handleRecaptcha}
                   size="compact"
                 />
-                <S.SubmitButton type="submit">Submit</S.SubmitButton>
+                <S.SubmitButton disabled={loading} type="submit">
+                  Submit
+                </S.SubmitButton>
               </S.SubmitArea>
             </form>
           </>

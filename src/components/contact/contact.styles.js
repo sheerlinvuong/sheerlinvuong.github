@@ -77,17 +77,21 @@ export const SubmitButton = styled.button`
   color: ${theme.color.white};
   padding: 1rem 2rem;
   border-radius: 3rem;
-  box-shadow: -1px 4px 6px ${theme.color.cloudShadow};
   margin: 1.5rem;
   border: none;
   font-size: 18px;
   cursor: pointer;
-  :focus {
+
+  &:focus {
     outline: none;
   }
-  :hover {
+  &:hover {
     background-color: ${theme.color.hillGreen};
     box-shadow: 0px 2px 2px ${theme.color.cloudShadow};
+  }
+  &:disabled {
+    background-color: ${theme.color.text};
+    cursor: not-allowed;
   }
 `;
 

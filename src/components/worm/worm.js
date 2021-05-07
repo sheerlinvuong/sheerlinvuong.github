@@ -1,48 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { useTrail, animated } from 'react-spring';
+import React from 'react';
+import { animated } from 'react-spring';
 import styled from 'styled-components';
 import { theme } from '../theme';
 import PropTypes from 'prop-types';
+import { mousePosition } from './wormHooks';
 
 const isMobile = () => {
   const ua = navigator.userAgent;
   return /Android|Mobi/i.test(ua);
 };
 
-export const mousePosition = () => {
-  const [position, setPosition] = useState([100, 100]);
-  const [hidden, setHidden] = useState(false);
-  const [trail, setTrail] = useTrail(20, () => ({
-    position,
-    config: { tension: 2000, friction: 65 }
-  }));
-  useEffect(() => {
-    document.addEventListener('mousemove', (e) => {
-      const xy = [e.clientX, e.clientY];
-      setPosition(xy);
-      setTrail({ position: xy });
-    });
-    document.addEventListener('mouseenter', (e) => {
-      setHidden(false);
-    });
-    document.addEventListener('mouseleave', (e) => {
-      setHidden(true);
-    });
-    document.querySelectorAll('a, form').forEach((el) => {
-      el.addEventListener('mouseover', () => setHidden(true));
-      el.addEventListener('mouseout', () => setHidden(false));
-    });
-  }, []);
-
-  return {
-    position,
-    trail,
-    hidden
-  };
-};
-export const WormyWorm = () => {
+export const WormyWorm = ({ isActive }) => {
   if (typeof navigator !== 'undefined' && isMobile()) return null;
-  const { position, trail, hidden } = mousePosition();
+  const { position, trail, hidden } = mousePosition(isActive);
   const trans = (x, y) =>
     `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`;
 
@@ -112,5 +82,6 @@ const WormFace = (props) => {
 };
 
 WormyWorm.propTypes = {
-  position: PropTypes.arrayOf(PropTypes.number)
+  position: PropTypes.arrayOf(PropTypes.number),
+  isActive: PropTypes.bool
 };

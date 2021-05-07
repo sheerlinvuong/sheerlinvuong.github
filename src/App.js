@@ -1,21 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Switch } from 'react-router-dom';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import { WrapperSt } from './App.styles';
 import HomePage from './components/pages/homePage.js';
+import { FunPage } from './components/pages/funPage';
 import { WormyWorm } from './components/worm/worm';
 
 const App = () => {
+  let location = useLocation();
+  const isHomePage = location.pathname === '/';
   return (
-    <Router>
-      <WrapperSt>
-        <WormyWorm />
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          {/* <Route path="/fun" component={HomePage} /> */}
-        </Switch>
-      </WrapperSt>
-    </Router>
+    <WrapperSt>
+      <WormyWorm isActive={isHomePage} />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/fun" component={FunPage} />
+      </Switch>
+    </WrapperSt>
   );
 };
 export default App;
