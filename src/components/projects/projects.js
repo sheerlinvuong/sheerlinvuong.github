@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import telegramGif from './telegram.gif';
 import telegramMp4 from './telegram.mp4';
-import whodatGif from './whodat.gif';
 import whodatMp4 from './whodat.mp4';
 import * as S from './projects.styles';
 
@@ -14,7 +12,6 @@ class Projects extends Component {
           <S.ImgWrapper>
             <video autoPlay={true} loop muted playsInline>
               <source src={whodatMp4} type="video/mp4" />
-              <img alt="" src={whodatGif} />
             </video>
           </S.ImgWrapper>
           <div className="content">
@@ -41,7 +38,6 @@ class Projects extends Component {
           <S.ImgWrapper>
             <video autoPlay loop muted playsInline>
               <source src={telegramMp4} type="video/mp4" />
-              <img alt="telegram form" src={telegramGif} />
             </video>
           </S.ImgWrapper>
           <div className="content">
