@@ -4,12 +4,13 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 /**
  *      TODO
- * [] max zoom out
- * [] center text
  * [] avoid donuts rendering near text
- * [] camera start at distance
+ * [] window resize event listener
  * [] nicer font
  * [] remove axis helper and console.logs
+ * [x] max zoom out
+ * [x] center text
+ * [x] camera start at distance
  */
 
 export const FunPage = () => {
@@ -19,14 +20,15 @@ export const FunPage = () => {
      **/
     const scene = new THREE.Scene();
     // axis helper
-    const axisHelper = new THREE.AxesHelper();
-    scene.add(axisHelper);
+    // const axisHelper = new THREE.AxesHelper();
+    // scene.add(axisHelper);
 
     /**
      * Objects
      **/
     const material = new THREE.MeshNormalMaterial();
 
+    THREE.Cache.enabled = true;
     const fontLoader = new THREE.FontLoader();
     fontLoader.load(
       `${process.env.PUBLIC_URL}/georgia_bold.typeface.json`,
@@ -44,30 +46,26 @@ export const FunPage = () => {
         });
         textGeometry.computeBoundingBox();
 
-        // textGeometry.center();
-        // textGeometry.translate(0, 0.2, 0);
-        console.log(textGeometry.boundingBox);
+        textGeometry.center();
+        textGeometry.translate(0, 0.2, 0);
 
         const text = new THREE.Mesh(textGeometry, material);
         scene.add(text);
 
-        console.time('donuts');
         const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45);
-        for (let i = 0; i < 300; i++) {
+        for (let i = 0; i < 500; i++) {
           const donut = new THREE.Mesh(donutGeometry, material);
-          donut.position.x = (Math.random() - 0.5) * 10;
-          donut.position.y = (Math.random() - 0.5) * 10;
-          donut.position.z = (Math.random() - 0.5) * 10;
+          donut.position.x = (Math.random() - 0.5) * 30;
+          donut.position.y = (Math.random() - 0.5) * 30;
+          donut.position.z = (Math.random() - 0.5) * 30;
 
           donut.rotation.x = Math.random() * Math.PI;
           donut.rotation.y = Math.random() * Math.PI;
 
           const scale = Math.random();
           donut.scale.set(scale, scale, scale);
-
           scene.add(donut);
         }
-        console.timeEnd('donuts');
       }
     );
 
@@ -79,9 +77,9 @@ export const FunPage = () => {
       height: window.innerHeight
     };
     const camera = new THREE.PerspectiveCamera(55, sizes.width / sizes.height);
-    camera.position.x = 1;
-    camera.position.y = 1;
-    camera.position.z = 2;
+    camera.position.x = 10;
+    camera.position.y = -1;
+    camera.position.z = 10;
     scene.add(camera);
 
     /**
@@ -98,6 +96,9 @@ export const FunPage = () => {
      */
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true;
+    controls.autoRotate = true;
+    controls.minDistance = 5;
+    controls.maxDistance = 50;
     renderer.render(scene, camera);
 
     /**
