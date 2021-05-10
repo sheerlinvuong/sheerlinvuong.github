@@ -3,6 +3,7 @@ import * as S from './homePage.styles';
 import { Hero } from '../hero/hero';
 import { Work } from '../work/work';
 import Projects from '../projects/projects';
+import Socials from '../socials/connect';
 import { Contact } from '../contact/contact';
 class HomePage extends Component {
   render() {
@@ -11,6 +12,7 @@ class HomePage extends Component {
         <Hero />
         <Work />
         <Projects />
+        <Socials />
         <Contact />
       </S.Page>
     );
