@@ -9,7 +9,7 @@ class Socials extends Component {
         <Heading>Let&apos;s connect!</Heading>
         <IconsSt>
           <IconGithub href="https://github.com/sheerlinvuong" />
-          <IconLinkedin href="https://www.linkedin.com/in/sheerlin-vuong-8396aa174/" />
+          <IconLinkedin href="https://www.linkedin.com/in/sheerlin/" />
           <IconMedium href="https://medium.com/@sheerlinvuong" />
           <IconEmail href="mailto:sheerlinvuong@gmail.com" />
           {/* <IconTwitter href="https://twitter.com/sheerlinonline"/> */}
